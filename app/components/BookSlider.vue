@@ -9,7 +9,7 @@
         >
             <SplideSlide v-for="(img, index) in imagesList" :key="index">
                 <div class="w-full h-full flex justify-center items-center">
-                    <img
+                    <NuxtImg
                         :src="img"
                         :alt="`Book ${index + 1}`"
                         class="w-full h-auto max-h-[500px] lg:max-h-[600px] object-contain rounded-lg"

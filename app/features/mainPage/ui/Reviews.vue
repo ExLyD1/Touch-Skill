@@ -177,6 +177,7 @@ const splideOptionsDesktop = {
 
 const splideOptionsMobile = {
     type: 'slide',
+    rewind: true,
     perPage: 1,
     perMove: 1,
     gap: '1rem',
