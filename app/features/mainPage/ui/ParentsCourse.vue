@@ -39,12 +39,13 @@
             назавжди. <strong>Курс триває 2 дні</strong>
         </p>
 
-        <SplitButton
-            data-aos="zoom-in"
-            class="mt-[30px] px-[15px] max-w-[376px] w-full"
-            label="Записатися на курс"
-            @click="scrollToElement('packages')"
-        />
+        <a href="https://t.me/touch_skill" class="w-fit">
+            <SplitButton
+                data-aos="zoom-in"
+                class="mt-[30px] px-[15px] max-w-[376px] w-full"
+                label="Записатися на курс"
+            />
+        </a>
     </div>
 </template>
 

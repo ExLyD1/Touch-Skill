@@ -211,7 +211,7 @@
             <img
                 src="/images/book/book_page.webp"
                 alt="touch&skill-book"
-                class="w-[190px] h-[168px] object-cover rounded-lg shadow-md"
+                class="w-[200px] h-[168px] object-cover rounded-lg shadow-md"
             />
 
             <!-- Buttons -->
@@ -223,11 +223,18 @@
                         :old-price="550"
                         :current-price="249"
                         size="xs"
-                        class="btn-purple-glow"
-                /></a>
+                        ><template #icon>
+                            <img
+                                src="/images/favorite.svg"
+                                alt="touch&skill-favorite-img"
+                                class="absolute -top-1 right-6"
+                                aria-hidden="true"
+                            /> </template></BasePriceButton
+                ></a>
 
                 <!-- Buy button -->
                 <a
+                    href="https://t.me/touch_skill"
                     class="relative flex items-center justify-center w-full rounded-2xl font-semibold text-xs text-white bg-purple p-2 hover:bg-purple-active transition-all shadow-md"
                 >
                     Придбати електронну книгу
@@ -248,16 +255,13 @@ import Reviews from '~/features/mainPage/ui/Reviews.vue';
 import PriceAndPackages from '~/features/mainPage/ui/PriceAndPackages.vue';
 import FAQ from '~/features/mainPage/ui/FAQ.vue';
 
-const isAdvertismentVisible = ref<boolean>();
+const isAdvertismentVisible = ref<boolean>(false);
 const toggleAdvertisment = () => {
     isAdvertismentVisible.value = !isAdvertismentVisible.value;
 };
 
 onMounted(() => {
-    useScroll().onScrollPercent(
-        10,
-        () => (isAdvertismentVisible.value = false)
-    );
+    useScroll().onScrollPercent(10, () => (isAdvertismentVisible.value = true));
 });
 </script>
 

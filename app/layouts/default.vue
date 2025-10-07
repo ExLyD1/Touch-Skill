@@ -43,7 +43,9 @@
                     сьогодні!
                 </h1>
 
-                <SplitButton label="Записатися на курс" />
+                <a href="https://t.me/touch_skill" class="w-fit">
+                    <SplitButton label="Записатися на курс"
+                /></a>
             </div>
         </div>
 

@@ -34,7 +34,7 @@
                 <span
                     v-if="hasOldPrice"
                     class="line-through text-[#BBBBBB] sm:mb-0 mb-[-5px]"
-                    :class="oldPriceClass"
+                    :class="[oldPriceClass, { 'sm:mb-[-7px]': size === 'xs' }]"
                 >
                     {{ formattedOldPrice }}
                     <span class="text-sm" :class="currencyClass">{{
