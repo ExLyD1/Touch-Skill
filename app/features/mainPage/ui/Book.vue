@@ -52,6 +52,7 @@ div
                         :old-price="550"
                         :current-price="249"
                         :size="isSmallScreen === false ? 'lg' : 'xs'"
+                        custom-gap="64px"
                     />
                 </div>
                 <div class="shrink-0" data-aos="fade-left">

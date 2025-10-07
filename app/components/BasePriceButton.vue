@@ -2,9 +2,10 @@
     <button
         :type="type"
         :class="[
-            'relative w-full  gap-[30px] sm:gap-[34px] rounded-[25px]  flex items-center  h-full',
+            `relative w-full  gap-[30px] sm:gap-[34px] rounded-[25px]  flex items-center  h-full`,
             sizeClass,
             variantClass,
+            { 'sm:gap-[64px]': size === 'lg' },
         ]"
         :style="sizeStyles"
         :aria-label="ariaLabel"
@@ -68,6 +69,7 @@ const props = defineProps({
     },
     ariaLabel: { type: String, default: '' },
     locale: { type: String, default: undefined },
+    customGap: { type: String, default: '34px' },
 });
 
 const { size, variant, oldPrice, currentPrice } = toRefs(props);
@@ -75,7 +77,7 @@ const { size, variant, oldPrice, currentPrice } = toRefs(props);
 const sizesMap = {
     lg: {
         padding: '18px 24px',
-        labelSize: 'text-base',
+        labelSize: 'text-base ',
         oldPriceSize: 'text-base',
         currentPriceSize: 'text-3xl',
     },
