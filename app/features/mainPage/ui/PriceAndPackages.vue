@@ -45,12 +45,12 @@
                             <p
                                 class="line-through opacity-60 text-[#BCBCBC] font-medium text-sm sm:text-lg"
                             >
-                                580грн
+                                580zł
                             </p>
                             <p
                                 class="text-[25px] sm:text-[36px] font-semibold mt-[-10px]"
                             >
-                                290грн
+                                290zł
                             </p>
                         </div>
                     </div>
