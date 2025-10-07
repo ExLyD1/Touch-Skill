@@ -18,7 +18,7 @@ div
             </h1>
 
             <ClientOnly>
-                <BookSlider data-aos="flip-up" class="sm:hidden block" />
+                <BookSlider data-aos="flip-up" class="sm:hidden flex" />
             </ClientOnly>
 
             <p data-aos="zoom-in" class="text-sm sm:text-lg leading-relaxed">

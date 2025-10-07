@@ -81,11 +81,13 @@ const imagesList = [
 ];
 
 const splideOptions = {
-    type: 'loop',
+    type: 'slide',
     perPage: 1, // лише один слайд
     focus: 'center', // центрований слайд
     perMove: 1,
-    gap: '0px', // видаляємо додаткові відступи
+    gap: '0rem', // видаляємо додаткові відступи
+    autoWidth: false,
+    trimSpace: false,
     arrows: false,
     pagination: false,
     autoplay: false,

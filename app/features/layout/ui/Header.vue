@@ -7,7 +7,6 @@
             class="header_container m-auto 2xl:max-w-[80%] max-w-[100%] w-full min-w-0 flex items-center justify-between lg:gap-[20px] xl:gap-[50px] p-[13px]"
         >
             <!-- Main logo -->
-
             <NuxtImg
                 src="/images/logo.png"
                 alt="touch-skills-logo"
