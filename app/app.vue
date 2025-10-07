@@ -130,15 +130,15 @@ useHead({
             rel: 'icon',
             type: 'image/png',
             sizes: '32x32',
-            href: '/images/logo_hands.png',
+            href: '/images/logo32x32.svg',
         },
         {
             rel: 'icon',
             type: 'image/png',
             sizes: '16x16',
-            href: '/images/logo_hands.png',
+            href: '/images/logo16x16.svg',
         },
-        { rel: 'apple-touch-icon', href: '/images/logo_hands.png' },
+        { rel: 'apple-touch-icon', href: '/images/logo16x16.svg' },
     ],
     meta: [
         { name: 'description', content: description },

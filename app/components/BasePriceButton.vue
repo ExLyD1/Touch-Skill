@@ -2,7 +2,7 @@
     <button
         :type="type"
         :class="[
-            'relative w-full max-w-[470px] rounded-[25px] flex items-center justify-between h-full',
+            'relative w-full  gap-[30px] sm:gap-[34px] rounded-[25px]  flex items-center  h-full',
             sizeClass,
             variantClass,
         ]"
@@ -12,28 +12,28 @@
     >
         <!-- Optional icon slot (fallback to bookmark image) -->
 
-        <!-- <slot name="icon">
+        <slot name="icon">
             <img
                 src="/images/favorite.svg"
                 alt="touch&skill-favorite-img"
-                class="absolute -top-1 right-24"
+                class="absolute -top-2 right-6"
                 aria-hidden="true"
             />
-        </slot> -->
+        </slot>
 
         <!-- Content / label -->
-        <div class="flex-1 text-left pr-6 min-w-0">
+        <div class="text-left min-w-0 max-w-[250px]">
             <p class="font-medium" :class="labelClass">
                 <slot>{{ label }}</slot>
             </p>
         </div>
 
         <!-- Price block -->
-        <div class="flex items-end gap-2 ml-4 shrink-0">
+        <div class="flex items-start gap-2 shrink-0">
             <div class="flex flex-col items-start leading-none">
                 <span
                     v-if="hasOldPrice"
-                    class="line-through text-gray-400"
+                    class="line-through text-[#BBBBBB] sm:mb-0 mb-[-5px]"
                     :class="oldPriceClass"
                 >
                     {{ formattedOldPrice }}
@@ -61,7 +61,7 @@ const props = defineProps({
     currentPrice: { type: [Number, String], required: true },
     size: { type: String as () => 'lg' | 'md' | 'sm' | 'xs', default: 'lg' },
     variant: { type: String as () => 'primary' | 'ghost', default: 'primary' },
-    currency: { type: String, default: 'zł' },
+    currency: { type: String, default: 'грн' },
     type: {
         type: String as () => 'button' | 'submit' | 'reset',
         default: 'button',
@@ -93,9 +93,9 @@ const sizesMap = {
     },
     xs: {
         padding: ' 7px 37px 10px 20px',
-        labelSize: 'text-xs',
-        oldPriceSize: 'text-xs',
-        currentPriceSize: 'text-lg',
+        labelSize: 'text-xs font-medium',
+        oldPriceSize: 'text-xs font-medium',
+        currentPriceSize: 'text-lg font-medium',
     },
 };
 

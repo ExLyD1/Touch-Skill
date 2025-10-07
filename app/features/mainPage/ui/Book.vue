@@ -1,3 +1,4 @@
+div
 <template>
     <div
         class="flex flex-col lg:flex-row items-start justify-between lg:items-end gap-8 lg:gap-12"
@@ -37,7 +38,7 @@
             </p>
 
             <div
-                class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center gap-4"
+                class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center sm:max-h-[104px] h-full gap-4"
             >
                 <div class="shrink-0" data-aos="fade-right">
                     <a
@@ -55,24 +56,19 @@
                     </a>
                 </div>
 
-                <div data-aos="fade-left">
-                    <ClientOnly>
-                        <a href="https://t.me/touch_skill">
-                            <BasePriceButton
-                                @click="
-                                    () => {
-                                        useMixpanel().trackBuy();
-                                    }
-                                "
-                                :disabled="loading"
-                                label='Вивчай масаж за новим підручником - книга "Посібник для масажиста"'
-                                :old-price="550"
-                                :current-price="249"
-                                class="btn-purple-glow"
-                                :size="isSmallScreen === false ? 'lg' : 'xs'"
-                            />
-                        </a>
-                    </ClientOnly>
+                <div data-aos="fade-left" class="flex-grow">
+                    <BasePriceButton
+                        @click="
+                            () => {
+                                useMixpanel().trackBuy();
+                            }
+                        "
+                        :disabled="loading"
+                        label='Вивчай масаж за новим підручником - книга "Посібник для масажиста"'
+                        :old-price="550"
+                        :current-price="249"
+                        :size="isSmallScreen === false ? 'lg' : 'xs'"
+                    />
                 </div>
             </div>
         </div>

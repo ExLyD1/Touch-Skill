@@ -1,6 +1,6 @@
 <template>
     <aside
-        class="dropdown_menu !pt-[0px] h-fit"
+        class="dropdown_menu !pt-[0px] h-full"
         :class="{
             open: isOpen,
             close: isTrigger,
@@ -11,7 +11,7 @@
             @click="emits('scrolling', item.href_id)"
             type="text"
             placeholder="Половина"
-            class="flex dropdown_item w-full py-[30px] border-b border-gray-500 font-[700] text-lg bg-white p-4"
+            class="flex dropdown_item w-full py-[25px] border-b border-gray-500 font-[700] text-lg bg-white p-4"
         >
             {{ item.label }}
         </a>

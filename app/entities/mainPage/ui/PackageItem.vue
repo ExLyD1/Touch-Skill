@@ -60,7 +60,7 @@
                         color: package.styles.oldPriceColor,
                     }"
                 >
-                    {{ package.oldPrice }}zł
+                    {{ package.oldPrice }}грн
                 </p>
                 <p
                     class="text-5xl font-bold"
@@ -68,7 +68,7 @@
                         color: package.styles.newPriceColor,
                     }"
                 >
-                    {{ package.currentPrice }}zł
+                    {{ package.currentPrice }}грн
                 </p>
             </div>
 

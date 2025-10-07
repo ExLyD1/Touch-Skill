@@ -1,7 +1,7 @@
 <template>
     <div
-        :class="{ '!overflow-y-hidden': isMenuVisible }"
-        class="flex flex-col min-h-[100vh] relative"
+        :class="{ 'overflow-y-hidden!': isMenuVisible }"
+        class="flex flex-col relative"
     >
         <Header
             @open-header="toggleMenuVisibility"
@@ -9,24 +9,18 @@
             class="z-20 fixed"
         />
 
-        <div :style="{ height: `99px` }"></div>
+        <div v-if="!isMenuVisible" :style="{ height: `99px` }"></div>
 
         <AsideMenu
             v-if="isMenuVisible"
             :is-open="isMenuVisible"
             :is-trigger="isTriggerAnimation"
-            @scrolling="(id: string) => {
-                toggleMenuVisibility()
+            @scrolling="(id:string) => {
+                toggleMenuVisibility();
                 scrollToElement(id)
             }"
-            class="flex-grow fixed w-full h-full top-16 z-50"
+            class="fixed w-full top-16 z-50 overflow-hidden! bg-white"
         />
-
-        <div
-            v-if="isMenuVisible"
-            class="fixed inset-0 bg-white z-40 top-16"
-            @click="toggleMenuVisibility"
-        ></div>
 
         <main class="flex-grow z-0">
             <slot />
@@ -130,24 +124,26 @@ const toggleMenuVisibility = () => {
 };
 
 // Блокування скролу сторінки
-watch(isMenuVisible, newValue => {
-    if (newValue) {
-        // Блокуємо скрол
-        document.body.style.overflow = 'hidden';
-    } else {
-        // Відновлюємо скрол
-        document.body.style.overflow = '';
+watch(
+    () => isMenuVisible.value,
+    newValue => {
+        if (newValue === true) {
+            // Блокуємо скрол
+
+            document.body.style.overflow = 'hidden';
+            console.log(document.body.style.overflow);
+        } else {
+            // Відновлюємо скрол
+            console.log(1);
+
+            document.body.style.overflow = '';
+        }
     }
-});
+);
 
 onMounted(async () => {
     await nextTick();
     useScroll();
-});
-
-// Очищення при unmount
-onUnmounted(() => {
-    document.body.style.overflow = '';
 });
 </script>
 
