@@ -41,7 +41,7 @@
             >
                 <div class="shrink-0" data-aos="fade-right">
                     <a
-                        href="https://t.me/@touch_skill"
+                        href="https://t.me/touch_skill"
                         class="group block btn-purple-glow max-w-full lg:max-w-[150px] rounded-[25px] py-5 text-center sm:text-start sm:pl-[12px] sm:pb-[20px] sm:pr-[20px] sm:pt-[45px] w-full shrink-0 relative cursor-pointer"
                     >
                         <img
@@ -57,7 +57,7 @@
 
                 <div data-aos="fade-left">
                     <ClientOnly>
-                        <a href="https://t.me/@touch_skill">
+                        <a href="https://t.me/touch_skill">
                             <BasePriceButton
                                 @click="
                                     () => {

@@ -74,7 +74,7 @@
 
             <!-- Button -->
             <a
-                href="https://t.me/@touch_skill"
+                href="https://t.me/touch_skill"
                 target="_blank"
                 class="group relative w-full rounded-2xl py-4 px-6 font-semibold text-lg flex items-center justify-center gap-2 mb-6 z-10 cursor-pointer"
                 :style="{

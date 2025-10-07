@@ -133,7 +133,7 @@
             <SplideSlide
                 v-for="(review, index) in reviewsList"
                 :key="index"
-                class="pb-5 pt-1 px-5 splide-slide-item"
+                class="pb-5 pt-1 splide-slide-item"
             >
                 <ReviewCard :review="review" />
             </SplideSlide>
@@ -159,8 +159,8 @@ const splideOptionsDesktop = {
     rewind: true,
     perPage: 4,
     perMove: 1,
-    gap: '2rem',
-    trimSpace: true,
+    gap: '1rem',
+    trimSpace: false,
     pagination: false,
     arrows: false,
     autoWidth: false,
@@ -184,8 +184,8 @@ const splideOptionsMobile = {
     pagination: false,
     autoWidth: false,
     breakpoints: {
-        425: { perPage: 1, gap: '1rem' },
-        355: { perPage: 1 },
+        425: { perPage: 1.2, gap: '1rem' },
+        380: { perPage: 1 },
     },
     trimSpace: true,
     speed: 600,

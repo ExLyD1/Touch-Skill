@@ -139,7 +139,6 @@ useHead({
             href: '/images/logo_hands.png',
         },
         { rel: 'apple-touch-icon', href: '/images/logo_hands.png' },
-        { rel: 'manifest', href: '/site.webmanifest' },
     ],
     meta: [
         { name: 'description', content: description },

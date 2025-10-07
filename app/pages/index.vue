@@ -217,7 +217,7 @@
             <!-- Buttons -->
             <div class="flex flex-col gap-3 w-full">
                 <!-- Price button -->
-                <a href="https://t.me/@touch_skill">
+                <a href="https://t.me/touch_skill">
                     <BasePriceButton
                         label="Вивчай масаж за новим підручником - книга “Посібник для масажиста”"
                         :old-price="550"
@@ -228,8 +228,7 @@
 
                 <!-- Buy button -->
                 <a
-                    href="https://t.me/@touch_skill"
-                    class="btn-purple-glow relative flex items-center justify-center w-full rounded-2xl font-semibold text-xs text-white bg-purple p-2 hover:bg-purple-active transition-all shadow-md"
+                    class="relative flex items-center justify-center w-full rounded-2xl font-semibold text-xs text-white bg-purple p-2 hover:bg-purple-active transition-all shadow-md"
                 >
                     Придбати електронну книгу
                 </a>

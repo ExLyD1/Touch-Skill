@@ -35,7 +35,7 @@
             <div class="flex items-center mt-4 gap-2 sm:gap-4">
                 <LabelText data-aos="fade-right">
                     <a
-                        href="https://t.me/@touch_skill"
+                        href="https://t.me/touch_skill"
                         target="_blank"
                         class="flex items-center gap-1"
                     >

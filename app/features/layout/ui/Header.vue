@@ -89,7 +89,7 @@ const headerConfig = [
     {
         img: '/images/telegram.svg',
         alt: 'telegram',
-        href: 'https://t.me/@touch_skill',
+        href: 'https://t.me/touch_skill',
     },
     {
         img: '/images/instagram.svg',

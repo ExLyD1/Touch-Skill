@@ -80,7 +80,7 @@ const footerConfigMedia = [
     {
         img: '/images/telegram_purple.svg',
         alt: 'telegram',
-        href: 'https://t.me/@touch_skill',
+        href: 'https://t.me/touch_skill',
     },
     {
         img: '/images/instagram_purple.svg',

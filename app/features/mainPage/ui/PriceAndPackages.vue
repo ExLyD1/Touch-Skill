@@ -27,7 +27,7 @@
                     <h1 class="text-2xl font-[500]">Курс для батьків</h1>
 
                     <div class="flex items-end gap-[20px] sm:gap-[50px] pt-6">
-                        <a href="https://t.me/@touch_skill" target="_blank">
+                        <a href="https://t.me/touch_skill" target="_blank">
                             <button
                                 class="group relative cursor-pointer w-full bg-white text-black text-[12px] rounded-2xl py-4 px-6 font-medium flex items-center justify-center gap-2 z-10 transition-all hover:bg-[#E6E6E6] duration-500 drop-shadow-[0_0_5px_#E6E6E6] hover:scale-105 hover:drop-shadow-[0_0_10px_#E6E6E6] text-center"
                             >
