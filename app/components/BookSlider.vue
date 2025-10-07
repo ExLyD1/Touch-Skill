@@ -82,6 +82,7 @@ const imagesList = [
 
 const splideOptions = {
     type: 'slide',
+    rewind: true,
     perPage: 1, // лише один слайд
     focus: 'center', // центрований слайд
     perMove: 1,
