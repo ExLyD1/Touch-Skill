@@ -22,7 +22,7 @@
             class="fixed w-full top-16 z-50 overflow-hidden! bg-white"
         />
 
-        <main class="flex-grow z-0 w-full max-w-screen-xl mx-auto px-4">
+        <main class="flex-grow z-0 w-full">
             <slot />
         </main>
 
