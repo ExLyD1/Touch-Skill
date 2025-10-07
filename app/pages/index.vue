@@ -66,7 +66,7 @@
                 <img
                     src="/images/logo_hands.png"
                     alt="tousch&skill-logo-hands"
-                    class="hands-animation"
+                    class="appear-animation"
                 />
 
                 <div class="logo-content">
@@ -75,7 +75,7 @@
                         <img
                             src="/images/touch.png"
                             alt="tousch&skill-logo-touch"
-                            class="touch-animation"
+                            class="appear-animation"
                         />
                         <p class="touch-text text-touch-animation">
                             <span class="inline-block text-reveal"
@@ -94,13 +94,13 @@
                         <img
                             src="/images/skill.png"
                             alt="tousch&skill-logo-skill"
-                            class="skill-animation"
+                            class="appear-animation"
                         />
                     </div>
                 </div>
             </div>
 
-            <a href="https://t.me/touch_skill" class="w-fit">
+            <a href="https://t.me/touch_skill" class="w-full sm:w-fit">
                 <SplitButton
                     label="Записатися на курс"
                     class="!mt-10 buttMobile flex sm:hidden w-full"
@@ -206,7 +206,8 @@
             <div
                 class="text-black text-2xl sm:text-3xl font-medium text-center pt-6"
             >
-                Посібник
+                Вивчай масаж <br />
+                за новим підручником
             </div>
 
             <!-- Book image -->
@@ -221,7 +222,7 @@
                 <!-- Price button -->
                 <a href="https://t.me/touch_skill">
                     <BasePriceButton
-                        label="Вивчай масаж за новим підручником - книга “Посібник для масажиста”"
+                        label="Купуй підручник у цифровому форматі - вивчай масаж будь-де!"
                         :old-price="550"
                         :current-price="249"
                         size="xs"
@@ -396,7 +397,7 @@ onMounted(() => {
     }
     .logo-content {
         margin-left: 8px;
-        margin-top: -180px !important;
+        margin-top: -230px !important;
     }
 
     .touch-text,
@@ -423,7 +424,7 @@ onMounted(() => {
 
 @media (max-width: 360px) {
     .logo-content {
-        margin-top: -150px !important;
+        margin-top: -200px !important;
     }
 }
 
@@ -460,6 +461,21 @@ onMounted(() => {
     100% {
         transform: translateY(0) scale(1);
         opacity: 1;
+    }
+}
+
+.appear-animation {
+    animation: appearSlow 3s 1s both;
+}
+
+@keyframes appearSlow {
+    0% {
+        scale: 0.75;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 100;
     }
 }
 

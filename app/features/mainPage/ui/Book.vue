@@ -40,7 +40,21 @@ div
             <div
                 class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center sm:max-h-[104px] h-full gap-4"
             >
-                <div class="shrink-0" data-aos="fade-right">
+                <div data-aos="fade-right" class="flex-grow">
+                    <BasePriceButton
+                        @click="
+                            () => {
+                                useMixpanel().trackBuy();
+                            }
+                        "
+                        :disabled="loading"
+                        label="Для замовлення підручника зв'яжіться з нашим менеджером"
+                        :old-price="550"
+                        :current-price="249"
+                        :size="isSmallScreen === false ? 'lg' : 'xs'"
+                    />
+                </div>
+                <div class="shrink-0" data-aos="fade-left">
                     <a
                         href="https://t.me/touch_skill"
                         class="group block btn-purple-glow max-w-full lg:max-w-[150px] rounded-[25px] py-5 text-center sm:text-start sm:pl-[12px] sm:pb-[20px] sm:pr-[20px] sm:pt-[45px] w-full shrink-0 relative cursor-pointer"
@@ -54,21 +68,6 @@ div
                             Зв'язатися з менеджером
                         </p>
                     </a>
-                </div>
-
-                <div data-aos="fade-left" class="flex-grow">
-                    <BasePriceButton
-                        @click="
-                            () => {
-                                useMixpanel().trackBuy();
-                            }
-                        "
-                        :disabled="loading"
-                        label='Вивчай масаж за новим підручником - книга "Посібник для масажиста"'
-                        :old-price="550"
-                        :current-price="249"
-                        :size="isSmallScreen === false ? 'lg' : 'xs'"
-                    />
                 </div>
             </div>
         </div>

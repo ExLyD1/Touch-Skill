@@ -22,7 +22,7 @@
         </slot>
 
         <!-- Content / label -->
-        <div class="text-left min-w-0 max-w-[250px]">
+        <div class="text-left min-w-0 max-w-[220px]">
             <p class="font-medium" :class="labelClass">
                 <slot>{{ label }}</slot>
             </p>
