@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -13,7 +13,7 @@
     --breakpoint-md: 768px;
     --breakpoint-lg: 1024px;
     --breakpoint-xl: 1280px;
-    --breakpoint-2xl: 1536px;
+    --breakpoint-2xl: 1540px;
 }
 
 @theme inline {
@@ -55,20 +55,20 @@
     --color-sidebar-ring: var(--sidebar-ring);
     --animate-accordion-down: accordion-down 0.2s ease-out;
     --animate-accordion-up: accordion-up 0.2s ease-out;
-  @keyframes accordion-down {
-  from {
-    height: 0;
+    @keyframes accordion-down {
+        from {
+            height: 0;
         }
-  to {
-    height: var(--reka-accordion-content-height);
+        to {
+            height: var(--reka-accordion-content-height);
         }
     }
-  @keyframes accordion-up {
-  from {
-    height: var(--reka-accordion-content-height);
+    @keyframes accordion-up {
+        from {
+            height: var(--reka-accordion-content-height);
         }
-  to {
-    height: 0;
+        to {
+            height: 0;
         }
     }
 }
@@ -145,10 +145,10 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
     }
 }

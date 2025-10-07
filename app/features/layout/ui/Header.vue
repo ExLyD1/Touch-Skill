@@ -4,7 +4,7 @@
         class="w-full min-w-0 bg-white flex items-center justify-center"
     >
         <div
-            class="m-auto xl:max-w-[80%] max-w-[100%] w-full min-w-0 flex items-center justify-between lg:gap-[20px] xl:gap-[50px] p-[13px]"
+            class="header_container m-auto 2xl:max-w-[80%] max-w-[100%] w-full min-w-0 flex items-center justify-between lg:gap-[20px] xl:gap-[50px] p-[13px]"
         >
             <!-- Main logo -->
 
@@ -158,5 +158,11 @@ label {
     margin: 5px auto;
     transition: background-color 0.4s ease-in, transform 0.4s ease-in,
         width 0.4s ease-in;
+}
+
+@media screen and (max-width: 1540px) {
+    .header_container {
+        gap: 20px;
+    }
 }
 </style>

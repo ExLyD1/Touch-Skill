@@ -1,5 +1,5 @@
 <template>
-    <div class="xl:max-w-[80%] max-w-[100%] w-full m-auto relative">
+    <div class="2xl:max-w-[80%] max-w-[100%] w-full m-auto relative">
         <!-- Initial Introduction -->
         <div
             id="initial"
