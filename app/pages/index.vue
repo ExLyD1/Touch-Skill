@@ -49,12 +49,14 @@
                     >
                 </div>
 
-                <SplitButton
-                    style="animation-delay: 0.8s"
-                    label="Записатися на курс"
-                    class="sm:mt-0 hidden sm:flex max-w-[300px] slide-left delay-[1s]"
-                    @click="scrollToElement('packages')"
-                />
+                <a href="https://t.me/touch_skill" class="w-fit">
+                    <SplitButton
+                        style="animation-delay: 0.8s"
+                        label="Записатися на курс"
+                        class="sm:mt-0 hidden sm:flex max-w-[300px] slide-left delay-[1s]"
+                        @click="scrollToElement('packages')"
+                    />
+                </a>
             </div>
 
             <!-- Right side Logo -->
@@ -99,11 +101,13 @@
                 </div>
             </div>
 
-            <SplitButton
-                label="Записатися на курс"
-                class="!mt-10 buttMobile flex sm:hidden w-full"
-                @click="scrollToElement('packages')"
-            />
+            <a href="https://t.me/touch_skill" class="w-fit">
+                <SplitButton
+                    label="Записатися на курс"
+                    class="!mt-10 buttMobile flex sm:hidden w-full"
+                    @click="scrollToElement('packages')"
+                />
+            </a>
         </div>
 
         <!-- About Course -->
