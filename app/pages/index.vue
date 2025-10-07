@@ -60,7 +60,7 @@
 
             <!-- Right side Logo -->
             <div
-                class="logo_main z-10 ml-[0px] sm:ml-[-50px] 2xl:ml-[50px] w-fit flex-shrink-0 scale-50 xl:scale-75 2xl:scale-100"
+                class="logo_main z-10 ml-[0px] sm:ml-[-50px] 2xl:ml-[50px] w-fit min-w-0 scale-50 xl:scale-75 2xl:scale-100"
             >
                 <!-- Hands -->
                 <img
@@ -341,6 +341,11 @@ onMounted(() => {
     font-size: 42px;
     font-weight: 500;
     white-space: nowrap;
+}
+@media screen and (max-width: 1680px) {
+    .logo-content {
+        scale: 0.75;
+    }
 }
 
 /* Responsive adjustments for logo */

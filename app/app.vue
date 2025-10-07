@@ -185,8 +185,9 @@ html,
 body {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 .btn-purple-glow {
