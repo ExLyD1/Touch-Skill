@@ -141,6 +141,7 @@ useHead({
         { rel: 'apple-touch-icon', href: '/images/logo16x16.svg' },
     ],
     meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: description },
         { name: 'robots', content: 'index, follow' },
 
