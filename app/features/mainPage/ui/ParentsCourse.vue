@@ -39,10 +39,10 @@
             назавжди. <strong>Курс триває 2 дні</strong>
         </p>
 
-        <a href="https://t.me/touch_skill" class="w-fit">
+        <a href="https://t.me/touch_skill" class="w-full sm:w-fit">
             <SplitButton
                 data-aos="zoom-in"
-                class="mt-[30px] px-[15px] max-w-[376px] w-full"
+                class="mt-[30px] px-[15px] sm:max-w-[376px] w-full"
                 label="Записатися на курс"
             />
         </a>
