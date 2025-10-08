@@ -7,7 +7,7 @@
         >
             <!-- Footer Data  -->
             <div
-                class="flex items-center gap-[40px] flex-wrap justify-center lg:flex-nowrap xl:gap-[100px]"
+                class="flex items-center gap-[20px] flex-wrap justify-start max-w-[170px] m-auto sm:max-w-auto sm:justify-center lg:flex-nowrap xl:gap-[100px]"
             >
                 <div
                     v-for="item in footerConfig"
@@ -22,7 +22,9 @@
                         :lazy="false"
                         class="flex-shrink-0"
                     />
-                    <p class="text-xl whitespace-nowrap">{{ item.label }}</p>
+                    <p class="sm:text-xl text-sm whitespace-nowrap">
+                        {{ item.label }}
+                    </p>
                 </div>
             </div>
 
