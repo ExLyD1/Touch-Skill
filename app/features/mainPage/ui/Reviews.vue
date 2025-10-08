@@ -185,8 +185,7 @@ const splideOptionsMobile = {
     pagination: false,
     autoWidth: false,
     breakpoints: {
-        425: { perPage: 1.2, gap: '1rem' },
-        380: { perPage: 1 },
+        425: { perPage: 1, autoWidth: true, gap: '0rem' },
     },
     trimSpace: true,
     speed: 600,

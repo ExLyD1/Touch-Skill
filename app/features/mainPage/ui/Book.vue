@@ -1,4 +1,3 @@
-div
 <template>
     <div
         class="flex flex-col lg:flex-row items-start justify-between lg:items-end gap-8 lg:gap-12"
@@ -38,7 +37,7 @@ div
             </p>
 
             <div
-                class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center sm:max-h-[104px] h-full gap-4"
+                class="flex flex-col sm:flex-row items-stretch sm:items-center sm:max-h-[104px] h-full gap-4"
             >
                 <div data-aos="fade-right" class="flex-grow">
                     <BasePriceButton
@@ -51,7 +50,7 @@ div
                         label="Для замовлення підручника зв'яжіться з нашим менеджером"
                         :old-price="550"
                         :current-price="249"
-                        :size="isSmallScreen === false ? 'lg' : 'xs'"
+                        :size="isSmallScreen === false ? 'lg' : 'sm'"
                         custom-gap="64px"
                     />
                 </div>

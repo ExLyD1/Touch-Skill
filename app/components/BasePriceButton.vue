@@ -17,13 +17,13 @@
             <img
                 src="/images/favorite.svg"
                 alt="touch&skill-favorite-img"
-                class="absolute -top-2 right-6"
+                class="absolute -top-2 right-10"
                 aria-hidden="true"
             />
         </slot>
 
         <!-- Content / label -->
-        <div class="text-left min-w-0 max-w-[220px]">
+        <div class="text-left min-w-0 max-w-[180px] sm:max-w-[220px]">
             <p class="font-medium" :class="labelClass">
                 <slot>{{ label }}</slot>
             </p>
