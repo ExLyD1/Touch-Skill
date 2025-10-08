@@ -62,17 +62,17 @@ const year = computed(() => new Date().getFullYear());
 
 const footerConfig = [
     {
-        img: '/images/phone.svg',
+        img: '/images/icons/phone.svg',
         alt: 'phone',
         label: '+48 573 835 000',
     },
     {
-        img: '/images/clock.svg',
+        img: '/images/icons/clock.svg',
         alt: 'clock',
         label: 'пн - сб: 9:00 - 18:00',
     },
     {
-        img: '/images/map.svg',
+        img: '/images/icons/map.svg',
         alt: 'map',
         label: 'Warszawa, Poland',
     },
@@ -80,22 +80,22 @@ const footerConfig = [
 
 const footerConfigMedia = [
     {
-        img: '/images/telegram_purple.svg',
+        img: '/images/icons/telegram_purple.svg',
         alt: 'telegram',
         href: 'https://t.me/touch_skill',
     },
     {
-        img: '/images/instagram_purple.svg',
+        img: '/images/icons/instagram_purple.svg',
         alt: 'instagram',
         href: 'https://www.instagram.com/massage_teacher_eu?igsh=MTUxYXlkN2NmcnQwMw%3D%3D&utm_source=qr',
     },
     {
-        img: '/images/facebook_purple.svg',
+        img: '/images/icons/facebook_purple.svg',
         alt: 'facebook',
         href: 'https://www.facebook.com/share/1EWGw15QwB/?mibextid=wwXIfr',
     },
     {
-        img: '/images/email.svg',
+        img: '/images/icons/email.svg',
         alt: 'threads',
         href: 'https://www.threads.com/@massage_teacher_eu?igshid=NTc4MTIwNjQ2YQ==',
     },

@@ -8,7 +8,7 @@
         >
             <!-- Main logo -->
             <NuxtImg
-                src="/images/logo.png"
+                src="/images/general/logo.png"
                 alt="touch-skills-logo"
                 class="logo block cursor-pointer flex-shrink-0 w-[52px] h-[50px] sm:w-[77px] sm:h-[73px]"
                 width="77"
@@ -86,17 +86,17 @@ onMounted(() => {
 
 const headerConfig = [
     {
-        img: '/images/telegram.svg',
+        img: '/images/icons/telegram.svg',
         alt: 'telegram',
         href: 'https://t.me/touch_skill',
     },
     {
-        img: '/images/instagram.svg',
+        img: '/images/icons/instagram.svg',
         alt: 'instagram',
         href: 'https://www.instagram.com/massage_teacher_eu?igsh=MTUxYXlkN2NmcnQwMw%3D%3D&utm_source=qr',
     },
     {
-        img: '/images/facebook.svg',
+        img: '/images/icons/facebook.svg',
         alt: 'facebook',
         href: 'https://www.facebook.com/share/1EWGw15QwB/?mibextid=wwXIfr',
     },

@@ -29,7 +29,7 @@
                         class="slide-left delay-[0.6s]"
                         style="animation-delay: 0.4s"
                         ><img
-                            src="/images/ready.svg"
+                            src="/images/icons/ready.svg"
                             alt="tousch&skill-ready-image"
                         />
                         <p class="text-lg sm:text-xl font-[700] pl-2">
@@ -40,7 +40,7 @@
                         class="slide-left delay-[0.8s]"
                         style="animation-delay: 0.6s"
                         ><img
-                            src="/images/ready.svg"
+                            src="/images/icons/ready.svg"
                             alt="tousch&skill-ready-image"
                         />
                         <p class="text-lg sm:text-xl font-[700] pl-2">
@@ -64,7 +64,7 @@
             >
                 <!-- Hands -->
                 <img
-                    src="/images/logo_hands.png"
+                    src="/images/general/logo_hands.png"
                     alt="tousch&skill-logo-hands"
                     class="appear-animation"
                 />
@@ -73,7 +73,7 @@
                     <!-- Touch -->
                     <div class="touch-container">
                         <img
-                            src="/images/touch.png"
+                            src="/images/general/touch.png"
                             alt="tousch&skill-logo-touch"
                             class="appear-animation"
                         />
@@ -92,7 +92,7 @@
                             >
                         </p>
                         <img
-                            src="/images/skill.png"
+                            src="/images/general/skill.png"
                             alt="tousch&skill-logo-skill"
                             class="appear-animation"
                         />
@@ -153,7 +153,7 @@
                 class="bg-[#F4F5FD] flex flex-col-reverse lg:flex-row gap-[20px] lg:gap-[120px] items-center w-full rounded-3xl px-4 sm:px-[35px] lg:px-20 py-5 mt-[30px]"
             >
                 <img
-                    src="/images/procent.webp"
+                    src="/images/general/procent.webp"
                     alt="touch&skill-procent-data-image"
                     class="2xl:flex-shrink-0 size-48 sm:size-auto lg:size-72 xl:size-auto"
                 />
@@ -196,7 +196,7 @@
                 class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center bg-[#5521F1] rounded-full hover:scale-105 transition-transform cursor-pointer"
             >
                 <img
-                    src="/images/close.svg"
+                    src="/images/icons/close.svg"
                     alt="touch&skill-close-advertisment"
                     class="w-4 h-4"
                 />
@@ -228,7 +228,7 @@
                         size="xs"
                         ><template #icon>
                             <img
-                                src="/images/favorite.svg"
+                                src="/images/icons/favorite.svg"
                                 alt="touch&skill-favorite-img"
                                 class="absolute -top-1 right-6"
                                 aria-hidden="true"

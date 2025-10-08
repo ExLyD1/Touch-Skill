@@ -9,7 +9,10 @@
         <div
             class="h-[62px] w-[62px] sm:h-[70px] sm:w-[70px] flex-shrink-0 flex items-center justify-center cursor-pointer rounded-xl bg-purple transition-all hover:bg-purple-active duration-500 hover:drop-shadow-[0_0_10px_rgba(73,20,231,1)]"
         >
-            <img src="/images/arrow_top.svg" alt="skill&touch_arrow_top" />
+            <img
+                src="/images/icons/arrow_top.svg"
+                alt="skill&touch_arrow_top"
+            />
         </div>
     </div>
 </template>

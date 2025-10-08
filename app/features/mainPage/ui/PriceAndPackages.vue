@@ -34,7 +34,7 @@
                                 записатися на курс
 
                                 <img
-                                    src="/images/arrow_down_black.svg"
+                                    src="/images/icons/arrow_down_black.svg"
                                     alt="skill&touch-course-subscription-button-arrow-down-image"
                                     class="flex-shrink-0 h-[14px] w-[14px] absolute top-2 right-2 group-hover:top-3 group-hover:right-3 transition-all duration-500"
                                 />

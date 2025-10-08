@@ -21,35 +21,35 @@
                     <img
                         v-if="index === 0"
                         class="absolute bottom-0 left-0 z-0 rounded-3xl"
-                        src="/images/palm1.png"
+                        src="/images/palms/course_palm1.png"
                         alt="touch%skill_course_background"
                     />
 
                     <img
                         v-if="index === 0"
                         class="absolute left-0 top-0 z-0 rounded-3xl"
-                        src="/images/palm2.png"
+                        src="/images/palms/course_palm2.png"
                         alt="touch%skill_course_background"
                     />
 
                     <img
                         v-if="index === 1"
                         class="absolute left-0 top-0 z-0 rounded-3xl"
-                        src="/images/palm3.png"
+                        src="/images/palms/course_palm3.png"
                         alt="touch%skill_course_background"
                     />
 
                     <img
                         v-if="index === 1"
                         class="absolute bottom-0 right-0 z-0 rounded-3xl"
-                        src="/images/palm4.png"
+                        src="/images/palms/course_palm4.png"
                         alt="touch%skill_course_background"
                     />
 
                     <img
                         v-if="index === 2"
                         class="absolute bottom-0 right-0 z-0 rounded-3xl"
-                        src="/images/palm5.png"
+                        src="/images/palms/course_palm5.png"
                         alt="touch%skill_course_background"
                     />
                 </template>

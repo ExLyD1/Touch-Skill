@@ -93,8 +93,8 @@
                 <img
                     :src="
                         package.styles.buttonBgColor === '#FFFFFF'
-                            ? '/images/arrow_down_black.svg'
-                            : '/images/arrow_down.svg'
+                            ? '/images/icons/arrow_down_black.svg'
+                            : '/images/icons/arrow_down.svg'
                     "
                     alt="skill&touch-course-subscription-button-arrow-down-image"
                     class="flex-shrink-0 absolute top-2 right-2 group-hover:top-3 group-hover:right-4 transition-all duration-500"

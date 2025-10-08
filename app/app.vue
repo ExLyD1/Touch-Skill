@@ -7,7 +7,7 @@
 <script lang="ts" setup>
 const baseUrl = 'https://touchskill.online';
 const pageUrl = `${baseUrl.replace(/\/$/, '')}${baseUrl}`;
-const ogImage = `${baseUrl.replace(/\/$/, '')}/images/logo.svg`;
+const ogImage = `${baseUrl.replace(/\/$/, '')}/images/general/logo.png`;
 
 const title = 'Посібник для масажиста — практичний підручник | Touch&Skill';
 const description =
@@ -130,15 +130,15 @@ useHead({
             rel: 'icon',
             type: 'image/png',
             sizes: '32x32',
-            href: '/images/logo32x32.svg',
+            href: '/images/general/logo32x32.svg',
         },
         {
             rel: 'icon',
             type: 'image/png',
             sizes: '16x16',
-            href: '/images/logo16x16.svg',
+            href: '/images/general/logo16x16.svg',
         },
-        { rel: 'apple-touch-icon', href: '/images/logo16x16.svg' },
+        { rel: 'apple-touch-icon', href: '/images/general/logo16x16.svg' },
     ],
     meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

@@ -16,7 +16,7 @@
             <img
                 data-aos="flip-right"
                 class="tutorImageDesktop block lg:hidden flex-shrink-0 max-h-[412px] max-w-[312px] m-auto"
-                src="/images/tutor_image.webp"
+                src="/images/general/tutor_image.webp"
                 alt="touch&skill-tutor-image"
             />
 
@@ -40,7 +40,7 @@
                         class="flex items-center gap-1"
                     >
                         <img
-                            src="/images/telegram_mini.svg"
+                            src="/images/icons/telegram_mini.svg"
                             alt="touch&skill-telegram-mini-image"
                             class="w-4 sm:w-auto h-4 sm:h-auto"
                         />
@@ -57,7 +57,7 @@
                         class="flex items-center gap-1"
                     >
                         <img
-                            src="/images/instagram_mini.svg"
+                            src="/images/icons/instagram_mini.svg"
                             alt="touch&skill-telegram-mini-image"
                             class="w-4 sm:w-auto h-4 sm:h-auto"
                         />
@@ -74,7 +74,7 @@
         <img
             data-aos="flip-right"
             class="tutorImageDesktop hidden lg:block flex-shrink-0 sm:scale-75 xl:scale-100"
-            src="/images/tutor_image.webp"
+            src="/images/general/tutor_image.webp"
             alt="touch&skill-tutor-image"
         />
     </div>

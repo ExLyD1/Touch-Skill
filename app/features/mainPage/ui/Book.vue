@@ -61,7 +61,7 @@
                     >
                         <img
                             class="absolute top-1 right-1 hidden lg:block group-hover:top-3 group-hover:right-3 transition-all duration-500"
-                            src="/images/arrow_down.svg"
+                            src="/images/icons/arrow_down.svg"
                             alt="touch&skill-arrow-down"
                         />
                         <p class="font-bold text-white">
@@ -79,8 +79,6 @@ import BookSlider from '~/components/BookSlider.vue';
 import { useMediaQuery } from '#imports';
 
 const isSmallScreen = useMediaQuery('(max-width:1024px)');
-const screen = computed(() => isSmallScreen.value);
-console.log(screen.value);
 
 const loading = ref(false);
 </script>

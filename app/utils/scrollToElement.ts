@@ -1,6 +1,5 @@
 export const scrollToElement = async (id: string): Promise<void> => {
     // if (!import.meta.client) return;
-    console.log(id);
 
     await nextTick();
     const el = document.querySelector(`#${id}`);

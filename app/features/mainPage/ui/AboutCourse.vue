@@ -11,7 +11,7 @@
             <!-- Course image -->
             <img
                 data-aos="flip-right"
-                src="/images/course_image.webp"
+                src="/images/general/course_image.webp"
                 alt="touch&skill-about-course-image"
                 class="flex-shrink-0 image"
             />
@@ -47,7 +47,7 @@
                             "
                         >
                             <img
-                                src="/images/done.svg"
+                                src="/images/icons/done.svg"
                                 alt="touch&skill-done-course-image"
                             />
 

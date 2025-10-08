@@ -53,7 +53,7 @@
 
         <ClientOnly>
             <img
-                src="/images/parents_image.webp"
+                src="/images/general/parents_image.webp"
                 alt="touch&skill-parents-image"
                 class="baby-image absolute right-0 top-[2525.08px] -z-10"
         /></ClientOnly>
@@ -133,10 +133,8 @@ watch(
             // Блокуємо скрол
 
             document.body.style.overflow = 'hidden';
-            console.log(document.body.style.overflow);
         } else {
             // Відновлюємо скрол
-            console.log(1);
 
             document.body.style.overflow = '';
         }

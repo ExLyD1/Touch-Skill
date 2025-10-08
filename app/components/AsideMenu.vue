@@ -61,22 +61,22 @@ const menuConfig = [
 
 const menuConfigMedia = [
     {
-        img: '/images/telegram.svg',
+        img: '/images/icons/telegram.svg',
         alt: 'telegram',
         href: 'https://t.me/touch_skill',
     },
     {
-        img: '/images/instagram.svg',
+        img: '/images/icons/instagram.svg',
         alt: 'instagram',
         href: 'https://www.instagram.com/massage_teacher_eu?igsh=MTUxYXlkN2NmcnQwMw%3D%3D&utm_source=qr',
     },
     {
-        img: '/images/facebook.svg',
+        img: '/images/icons/facebook.svg',
         alt: 'facebook',
         href: 'https://www.facebook.com/share/1EWGw15QwB/?mibextid=wwXIfr',
     },
     {
-        img: '/images/email_white.svg',
+        img: '/images/icons/email_white.svg',
         alt: 'threads',
         href: 'https://www.threads.com/@massage_teacher_eu?igshid=NTc4MTIwNjQ2YQ==',
     },
