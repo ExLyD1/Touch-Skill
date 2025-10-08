@@ -166,7 +166,7 @@ onMounted(async () => {
 
 .profi {
     position: relative;
-    background-image: url('/images/profi.webp');
+    background-image: url('/images/general/profi.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

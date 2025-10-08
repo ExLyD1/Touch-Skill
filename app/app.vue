@@ -5,6 +5,19 @@
 </template>
 
 <script lang="ts" setup>
+import { useScroll } from '#imports';
+const { check } = useScroll();
+const throttledCheck = throttle(check, 200);
+
+onMounted(async () => {
+    await check();
+    window.addEventListener('scroll', throttledCheck, { passive: true });
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', throttledCheck);
+});
+
 const baseUrl = 'https://touchskill.online';
 const pageUrl = `${baseUrl.replace(/\/$/, '')}${baseUrl}`;
 const ogImage = `${baseUrl.replace(/\/$/, '')}/images/general/logo.png`;

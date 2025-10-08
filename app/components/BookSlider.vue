@@ -1,8 +1,8 @@
 <template>
     <div
-        class="bookSliderContainer w-full lg:w-1/2 xl:w-[600px] relative flex-shrink-0 pb-12 sm:pb-0"
+        class="w-full lg:w-1/2 xl:w-[600px] relative flex-shrink-0 pb-12 sm:pb-0 flex flex-col"
     >
-        <Splide
+        <!-- <Splide
             ref="splideRef"
             :options="splideOptions"
             aria-label="Book Slider"
@@ -10,9 +10,34 @@
             <SplideSlide v-for="(img, index) in imagesList" :key="index">
                 <div class="w-full h-full flex justify-center items-center">
                     <NuxtImg
-                        :src="img"
+                        :src="img.url"
                         :alt="`Book ${index + 1}`"
                         class="w-full h-auto max-h-[500px] lg:max-h-[600px] object-contain rounded-lg"
+                    />
+                </div>
+            </SplideSlide>
+        </Splide> -->
+
+        <Splide
+            ref="splideRef"
+            :options="splideOptions"
+            aria-label="Book Slider"
+            class="w-full"
+        >
+            <SplideSlide
+                v-for="(img, index) in imagesList"
+                :key="index"
+                class="flex justify-center items-center"
+            >
+                <div>
+                    <img
+                        :src="img.url"
+                        :alt="`Book ${index + 1}`"
+                        class="h-auto w-full object-fill max-w-[400px] max-h-[458px] sm:max-w-[574px] sm:max-h-[590px]"
+                        :style="{
+                            width: isSmallScreen ? `${img.width}px` : 'auto',
+                            height: isSmallScreen ? `${img.height}px` : 'auto',
+                        }"
                     />
                 </div>
             </SplideSlide>
@@ -69,15 +94,42 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 // @ts-ignore
 import '@splidejs/vue-splide/css';
 
+import { useMediaQuery } from '#imports';
+const isSmallScreen = useMediaQuery('(max-width:640px)');
+
 const splideRef = ref<any>(null);
 
 const imagesList = [
-    '/images/book/book1.webp',
-    '/images/book/book_page1.webp',
-    '/images/book/book_page2.webp',
-    '/images/book/book_page3.webp',
-    '/images/book/book_page4.webp',
-    '/images/book/book_page5.webp',
+    {
+        url: '/images/book/book1.webp',
+        width: '374.7121276855469',
+        height: '330.2734375',
+    },
+    {
+        url: '/images/book/state1.png',
+        width: '299.157958984375',
+        height: '428.98150634765625',
+    },
+    {
+        url: '/images/book/state2.png',
+        width: '287.87725830078125',
+        height: '428.9814453125',
+    },
+    {
+        url: '/images/book/state3.png',
+        width: '350.5078430175781',
+        height: '428.9814453125',
+    },
+    {
+        url: '/images/book/state4.png',
+        width: '300.54913330078125',
+        height: '428.9814453125',
+    },
+    {
+        url: '/images/book/state5.png',
+        width: '308.41802978515625',
+        height: '428.9814453125',
+    },
 ];
 
 const splideOptions = {
@@ -86,7 +138,7 @@ const splideOptions = {
     perPage: 1, // лише один слайд
     focus: 'center', // центрований слайд
     perMove: 1,
-    gap: '0rem', // видаляємо додаткові відступи
+    gap: '3rem', // видаляємо додаткові відступи
     autoWidth: false,
     trimSpace: false,
     arrows: false,

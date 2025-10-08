@@ -2,7 +2,7 @@
     <div
         class="flex flex-col lg:flex-row items-start justify-between lg:items-end gap-8 lg:gap-12"
     >
-        <!-- Left Side Slider - Full Width on Mobile, Fixed Width on Desktop -->
+        <!-- Desktop Slider -->
         <ClientOnly> <BookSlider class="sm:block hidden" /> </ClientOnly>
 
         <!-- Right Side Text Information -->
@@ -16,6 +16,7 @@
                 Посібник
             </h1>
 
+            <!-- Mobile Slider -->
             <ClientOnly>
                 <BookSlider data-aos="flip-up" class="sm:hidden flex" />
             </ClientOnly>

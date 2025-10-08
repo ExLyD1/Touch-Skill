@@ -7,20 +7,19 @@ export const useScroll = () => {
         const screenHeight = window.innerHeight;
         const totalScroll = document.body.scrollHeight;
 
-        const toScroll = totalScroll - currentSroll - screenHeight;
         const scrolled = currentSroll + screenHeight;
         const scrollable = Math.round((scrolled * 100) / totalScroll);
 
         if (scrollable > 25 && !isScrolled25.value) {
+            isScrolled25.value = true;
             console.log('[Mixpanel] Tracked scroll: 25%');
             useMixpanel().trackScroll(25);
-            isScrolled25.value = true;
         }
 
         if (scrollable > 50 && !isScrolled50.value) {
+            isScrolled50.value = true;
             console.log('[Mixpanel] Tracked scroll: 50%');
             useMixpanel().trackScroll(50);
-            isScrolled50.value = true;
         }
     };
 
@@ -49,12 +48,10 @@ export const useScroll = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     };
 
-    const throttledCheck = throttle(check, 200);
-
-    window.addEventListener('scroll', throttledCheck, { passive: true });
-    check();
-
     return {
         onScrollPercent,
+        check,
+        isScrolled25,
+        isScrolled50,
     };
 };

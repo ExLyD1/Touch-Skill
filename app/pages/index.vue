@@ -212,7 +212,7 @@
 
             <!-- Book image -->
             <img
-                src="/images/book/book_page.webp"
+                src="/images/book/book.png"
                 alt="touch&skill-book"
                 class="w-[200px] h-[168px] object-cover rounded-lg shadow-md"
             />
