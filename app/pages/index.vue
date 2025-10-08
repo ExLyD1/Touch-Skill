@@ -248,7 +248,6 @@
 </template>
 
 <script lang="ts" setup>
-import { scrollToElement } from '#imports';
 import AboutCourse from '~/features/mainPage/ui/AboutCourse.vue';
 import CourseProgram from '~/features/mainPage/ui/CourseProgram.vue';
 import ParentsCourse from '~/features/mainPage/ui/ParentsCourse.vue';
