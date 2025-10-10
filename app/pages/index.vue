@@ -405,7 +405,7 @@ onMounted(() => {
     }
 
     .touch-text {
-        margin-left: -20px;
+        margin-left: -35px;
     }
 
     .skill-container {
