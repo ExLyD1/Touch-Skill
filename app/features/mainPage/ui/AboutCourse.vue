@@ -12,7 +12,7 @@
             <img
                 data-aos="flip-right"
                 src="/images/general/course_image.webp"
-                alt="touch&skill-about-course-image"
+                alt="Touch Skill-about-course-image"
                 class="flex-shrink-0 image"
             />
 
@@ -48,7 +48,7 @@
                         >
                             <img
                                 src="/images/icons/done.svg"
-                                alt="touch&skill-done-course-image"
+                                alt="Touch Skill-done-course-image"
                             />
 
                             <p>{{ item.label }}</p>

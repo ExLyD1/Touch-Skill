@@ -19,12 +19,14 @@ onUnmounted(() => {
 });
 
 const baseUrl = 'https://touchskill.online';
-const pageUrl = `${baseUrl.replace(/\/$/, '')}${baseUrl}`;
+const pageUrl = `${baseUrl.replace(/\/$/, '')}/`;
 const ogImage = `${baseUrl.replace(/\/$/, '')}/images/general/logo.png`;
+console.log(pageUrl);
+console.log(ogImage);
 
 const title = 'Посібник для масажиста — практичний підручник | Touch&Skill';
 const description =
-    'Посібник для масажиста — авторський практичний довідник Іллі Шулежка. Техніки, анатомія, кольорові ілюстрації та практичні вправи. Купити електронну книгу — доставка миттєва, 249 грн.';
+    'Курси професійного масажу | Варшава | Вивчай масаж за новим авторським підручником! Посібник для масажиста — авторський практичний довідник Іллі Шулежка. Техніки, анатомія, кольорові ілюстрації та практичні вправи. Купити електронну книгу — доставка миттєва, 249 грн. Завантажуй та вчися! Книга для початківців і практикуючих масажистів. Записуйся на курси масажу в Touch Skill! Знижки на навчання! ';
 const price = '249';
 const currency = 'UAH';
 
@@ -35,7 +37,7 @@ const bookJsonLd = {
     name: 'Посібник для масажиста. Авторський практичний довідник',
     author: { '@type': 'Person', name: 'Шулежко Ілля Олександрович' },
     datePublished: '2025-01-01',
-    publisher: { '@type': 'Organization', name: 'Touch&Skill', url: baseUrl },
+    publisher: { '@type': 'Organization', name: 'Touch Skill', url: baseUrl },
     description:
         'Практичний підручник для студентів, початківців та практикуючих масажистів: техніки, анатомія, показання/протипоказання та кольорові ілюстрації.',
     image: ogImage,
@@ -52,7 +54,7 @@ const productJsonLd = {
         'Електронна версія підручника «Посібник для масажиста» — техніки, 3D-ілюстрації та практичні вправи.',
     image: ogImage,
     sku: 'BOOK-001',
-    brand: { '@type': 'Brand', name: 'Touch&Skill' },
+    brand: { '@type': 'Brand', name: 'Touch Skill' },
     offers: {
         '@type': 'Offer',
         url: `${pageUrl}#buy`,
@@ -72,18 +74,6 @@ const breadcrumbJsonLd = {
             position: 1,
             name: 'Головна',
             item: baseUrl + '/',
-        },
-        {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Книги',
-            item: `${baseUrl}/books`,
-        },
-        {
-            '@type': 'ListItem',
-            position: 3,
-            name: 'Посібник для масажиста',
-            item: pageUrl,
         },
     ],
 };
@@ -141,6 +131,10 @@ useHead({
         { rel: 'canonical', href: pageUrl },
         {
             rel: 'icon',
+            href: '/images/general/logo.svg',
+        },
+        {
+            rel: 'icon',
             type: 'image/png',
             sizes: '32x32',
             href: '/images/general/logo32x32.svg',
@@ -157,10 +151,25 @@ useHead({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: description },
         { name: 'robots', content: 'index, follow' },
+        {
+            name: 'keywords',
+            content:
+                'Touch Skill, масаж, анатомія, масажист, практичний посібник, техніки масажу, довідник, посібник для масажиста, книга для масажиста, підручник для масажиста, навчання масажу, техніки масажу, анатомія для масажиста, масаж для початківців, електронна книга масаж, практичний довідник масажиста',
+        },
+        { name: 'author', content: 'Шулежко Ілля Олександрович' },
+
+        { property: 'og:locale', content: 'uk_UA' },
 
         { property: 'og:type', content: 'product' },
-        { property: 'og:title', content: title },
-        { property: 'og:description', content: description },
+        {
+            property: 'og:title',
+            content: 'ВЧИСЬ У ПРОФІ - БУДЬ ПРОФІ - TOUCH&SKILL',
+        },
+        {
+            property: 'og:description',
+            content:
+                'курси професійного масажу | Варшава | Вивчай масаж за новим авторським підручником!',
+        },
         { property: 'og:url', content: pageUrl },
         { property: 'og:image', content: ogImage },
         { property: 'og:site_name', content: 'Touch&Skill' },

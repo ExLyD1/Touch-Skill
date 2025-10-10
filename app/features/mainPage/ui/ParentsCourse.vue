@@ -18,7 +18,7 @@
         <img
             data-aos="fade-left"
             src="/images/general/parents_image.webp"
-            alt="touch&skill-parents-image"
+            alt="Touch Skill-parents-image"
             class="baby-image lg:hidden block w-full"
         />
 

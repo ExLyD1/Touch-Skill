@@ -16,7 +16,7 @@
         <slot name="icon">
             <img
                 src="/images/icons/favorite.svg"
-                alt="touch&skill-favorite-img"
+                alt="touch skill favorite img"
                 class="absolute -top-2 right-10"
                 aria-hidden="true"
             />

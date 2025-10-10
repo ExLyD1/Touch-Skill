@@ -54,49 +54,49 @@
         <ClientOnly>
             <img
                 src="/images/general/parents_image.webp"
-                alt="touch&skill-parents-image"
+                alt="Touch Skill-parents-image"
                 class="baby-image absolute right-0 top-[2525.08px] -z-10"
         /></ClientOnly>
 
         <img
             src="/images/palms/palms_about.webp"
-            alt="touch&skill-parents-image"
+            alt="Touch Skill-parents-image"
             class="absolute right-0 top-[744px] hidden sm:block -z-10"
         />
 
         <img
             src="/images/palms/palms_about_mobile.webp"
-            alt="touch&skill-parents-image"
+            alt="Touch Skill-parents-image"
             class="absolute right-0 top-[1055px] block sm:hidden -z-10"
         />
 
         <img
             src="/images/palms/palms_parent.webp"
-            alt="touch&skill-parents-image"
+            alt="Touch Skill-parents-image"
             class="absolute left-0 top-[3175.08px] hidden sm:block -z-10"
         />
 
         <img
             src="/images/palms/palms_book.webp"
-            alt="touch&skill-parents-image"
+            alt="Touch Skill-parents-image"
             class="absolute right-0 top-[3900px] hidden sm:block -z-10"
         />
 
         <img
             src="/images/palms/palms_faq.webp"
-            alt="touch&skill-parents-image"
+            alt="Touch Skill-parents-image"
             class="absolute right-0 top-[6838px] hidden sm:block -z-10"
         />
 
         <img
             src="/images/palms/palms_tutor_mobile_left.webp"
-            alt="touch&skill-parents-image"
+            alt="Touch Skill-parents-image"
             class="palm_tutor absolute left-0 top-[4324px] block sm:hidden -z-10"
         />
 
         <img
             src="/images/palms/palms_tutor_mobile_right.webp"
-            alt="touch&skill-parents-image"
+            alt="Touch Skill-parents-image"
             class="palm_tutor absolute right-0 top-[4324px] block sm:hidden -z-10"
         />
     </div>

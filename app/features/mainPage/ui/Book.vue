@@ -63,7 +63,7 @@
                         <img
                             class="absolute top-1 right-1 hidden lg:block group-hover:top-3 group-hover:right-3 transition-all duration-500"
                             src="/images/icons/arrow_down.svg"
-                            alt="touch&skill-arrow-down"
+                            alt="Touch Skill-arrow-down"
                         />
                         <p class="font-bold text-white">
                             Зв'язатися з менеджером

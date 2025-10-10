@@ -154,7 +154,7 @@
             >
                 <img
                     src="/images/general/procent.webp"
-                    alt="touch&skill-procent-data-image"
+                    alt="Touch Skill-procent-data-image"
                     class="2xl:flex-shrink-0 size-48 sm:size-auto lg:size-72 xl:size-auto"
                 />
 
@@ -197,7 +197,7 @@
             >
                 <img
                     src="/images/icons/close.svg"
-                    alt="touch&skill-close-advertisment"
+                    alt="Touch Skill-close-advertisment"
                     class="w-4 h-4"
                 />
             </button>
@@ -213,7 +213,7 @@
             <!-- Book image -->
             <img
                 src="/images/book/book.png"
-                alt="touch&skill-book"
+                alt="Touch Skill-book"
                 class="w-[200px] h-[168px] object-cover rounded-lg shadow-md"
             />
 
@@ -229,7 +229,7 @@
                         ><template #icon>
                             <img
                                 src="/images/icons/favorite.svg"
-                                alt="touch&skill-favorite-img"
+                                alt="Touch Skill-favorite-img"
                                 class="absolute -top-1 right-6"
                                 aria-hidden="true"
                             /> </template></BasePriceButton

@@ -9,8 +9,16 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         'shadcn-nuxt',
         'nuxt-aos',
-        '@unlok-co/nuxt-stripe',
+        '@nuxtjs/sitemap',
     ],
+
+    sitemap: {
+        siteUrl: 'https://touchskill.online',
+        gzip: true,
+        routes: ['/'],
+        autoLastmod: true,
+        credits: false,
+    },
 
     shadcn: {
         prefix: '',
