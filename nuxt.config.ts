@@ -12,10 +12,14 @@ export default defineNuxtConfig({
         '@nuxtjs/sitemap',
     ],
 
+    site: {
+        url: 'https://touchskill.online',
+        name: 'Touch Skill',
+    },
+
     sitemap: {
-        siteUrl: 'https://touchskill.online',
-        gzip: true,
-        routes: ['/'],
+        sitemapName: 'sitemap.xml',
+        urls: ['/'],
         autoLastmod: true,
         credits: false,
     },
