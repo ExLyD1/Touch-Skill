@@ -72,7 +72,7 @@ const props = defineProps({
     customGap: { type: String, default: '34px' },
 });
 
-const { size, variant, oldPrice, currentPrice } = toRefs(props);
+const { size, oldPrice, currentPrice } = toRefs(props);
 
 const sizesMap = {
     lg: {
