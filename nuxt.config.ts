@@ -9,20 +9,7 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         'shadcn-nuxt',
         'nuxt-aos',
-        '@nuxtjs/sitemap',
     ],
-
-    site: {
-        url: 'https://touchskill.online',
-        name: 'Touch Skill',
-    },
-
-    sitemap: {
-        sitemapName: 'sitemap.xml',
-        urls: ['/'],
-        autoLastmod: true,
-        credits: false,
-    },
 
     shadcn: {
         prefix: '',

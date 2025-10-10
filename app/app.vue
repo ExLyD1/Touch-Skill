@@ -131,7 +131,7 @@ useHead({
         { rel: 'canonical', href: pageUrl },
         {
             rel: 'icon',
-            href: '/images/general/logo.svg',
+            href: '/images/general/logo.png',
         },
         {
             rel: 'icon',
