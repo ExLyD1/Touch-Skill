@@ -24,7 +24,7 @@ const ogImage = `${baseUrl.replace(/\/$/, '')}/images/general/logo.png`;
 console.log(pageUrl);
 console.log(ogImage);
 
-const title = 'Посібник для масажиста — практичний підручник | Touch&Skill';
+const title = 'ВЧИСЬ У ПРОФІ - БУДЬ ПРОФІ - TOUCH&SKILL';
 const description =
     'Курси професійного масажу | Варшава | Вивчай масаж за новим авторським підручником! Посібник для масажиста — авторський практичний довідник Іллі Шулежка. Техніки, анатомія, кольорові ілюстрації та практичні вправи. Купити електронну книгу — доставка миттєва, 249 грн. Завантажуй та вчися! Книга для початківців і практикуючих масажистів. Записуйся на курси масажу в Touch Skill! Знижки на навчання! ';
 const price = '249';
@@ -178,8 +178,15 @@ useHead({
         { property: 'product:price:currency', content: currency },
 
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description },
+        {
+            name: 'twitter:title',
+            content: 'ВЧИСЬ У ПРОФІ - БУДЬ ПРОФІ - TOUCH&SKILL',
+        },
+        {
+            name: 'twitter:description',
+            content:
+                'курси професійного масажу | Варшава | Вивчай масаж за новим авторським підручником!',
+        },
         { name: 'twitter:image', content: ogImage },
     ],
     script: [
