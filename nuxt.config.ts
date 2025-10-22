@@ -39,6 +39,13 @@ export default defineNuxtConfig({
                     href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap',
                 },
             ],
+
+            meta: [
+                {
+                    name: 'google-site-verification',
+                    content: 'mBKTpSWUFUXNmmsprqtjzrD4mWklu6r8pNS87gpmJH8',
+                },
+            ],
         },
     },
 });
