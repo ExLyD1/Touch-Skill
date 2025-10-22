@@ -1,11 +1,11 @@
 <template>
     <div>
-        <h1
+        <h2
             data-aos="fade-up-right"
             class="text-[32px] sm:text-[48px] font-medium sm:text-start text-center"
         >
             Ціна та пакети
-        </h1>
+        </h2>
 
         <div class="grid grid-cols-1 2xl:grid-cols-3 gap-[20px] mt-5 sm:mt-10">
             <div
@@ -24,10 +24,14 @@
                     v-if="index === 0"
                     class="h-fit flex-shrink-0 2xl:max-w-[440px] flex justify-between flex-col max-w-full w-full py-5 px-7 sm:px-10 rounded-2xl bg-purple text-white"
                 >
-                    <h1 class="text-2xl font-[500]">Курс для батьків</h1>
+                    <h3 class="text-2xl font-[500]">Курс для батьків</h3>
 
                     <div class="flex items-end gap-[20px] sm:gap-[50px] pt-6">
-                        <a href="https://t.me/touch_skill" target="_blank">
+                        <a
+                            href="https://t.me/touch_skill"
+                            aria-label="Написати нам у Telegram"
+                            target="_blank"
+                        >
                             <button
                                 class="group relative cursor-pointer w-full bg-white text-black text-[12px] rounded-2xl py-4 px-6 font-medium flex items-center justify-center gap-2 z-10 transition-all hover:bg-[#E6E6E6] duration-500 drop-shadow-[0_0_5px_#E6E6E6] hover:scale-105 hover:drop-shadow-[0_0_10px_#E6E6E6] text-center"
                             >

@@ -2,12 +2,12 @@
     <div
         class="parentCourse flex flex-col gap-[25px] relative max-w-[535px] w-full"
     >
-        <h1
+        <h2
             data-aos="fade-up-right"
             class="text-[32px] sm:text-[48px] font-[500] px-[25px] text-center sm:text-start"
         >
             Курси для батьків
-        </h1>
+        </h2>
 
         <p data-aos="zoom-in" class="px-[25px] text-sm sm:text-lg">
             Це індивідуальні заняття для батьків немовлят або батьків дітей з
@@ -38,7 +38,11 @@
             назавжди. <strong>Курс триває 2 дні</strong>
         </p>
 
-        <a href="https://t.me/touch_skill" class="w-full sm:w-fit">
+        <a
+            href="https://t.me/touch_skill"
+            aria-label="Написати нам у Telegram"
+            class="w-full sm:w-fit"
+        >
             <SplitButton
                 data-aos="zoom-in"
                 class="mt-[30px] px-[15px] sm:max-w-[376px] w-full"

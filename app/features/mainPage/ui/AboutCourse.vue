@@ -1,11 +1,11 @@
 <template>
     <div>
-        <h1
+        <h2
             data-aos="fade-up-right"
             class="text-[48px] font-[500] text-center sm:text-start"
         >
             Про курс
-        </h1>
+        </h2>
 
         <div class="flex items-center gap-[100px]">
             <!-- Course image -->
@@ -30,12 +30,12 @@
                 </p>
 
                 <div class="flex flex-col gap-7">
-                    <h1
+                    <h2
                         data-aos="fade-right"
                         class="text-[#7B83B3] text-[18px] sm:text-2xl font-[700]"
                     >
                         Чому саме курс Touch&Skill?
-                    </h1>
+                    </h2>
 
                     <div class="flex flex-col gap-3 sm:gap-5">
                         <div

@@ -3,12 +3,12 @@
         <div>
             <!-- Desktop layout (sm и больше) -->
             <div class="hidden sm:flex flex-row relative">
-                <h1
+                <h2
                     data-aos="fade-up-right"
                     class="text-[48px] font-[500] px-[25px] text-start"
                 >
                     Відгуки
-                </h1>
+                </h2>
 
                 <!-- Custom Navigation Arrows -->
                 <div
@@ -56,11 +56,11 @@
 
             <!-- Mobile layout (меньше sm) -->
             <div class="sm:hidden block min-w-[0]">
-                <h1
+                <h2
                     class="text-[32px] font-[500] px-[25px] pb-[30px] text-center"
                 >
                     Відгуки
-                </h1>
+                </h2>
 
                 <!-- Mobile Slider -->
                 <Splide

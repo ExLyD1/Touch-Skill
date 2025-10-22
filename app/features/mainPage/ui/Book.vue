@@ -9,12 +9,12 @@
         <div
             class="w-full max-w-[650px] lg:flex-1 flex flex-col gap-[30px] px-0 sm:px-4 lg:px-0"
         >
-            <h1
+            <h2
                 data-aos="fade-up-left"
                 class="text-[32px] sm:text-[48px] font-[500] text-center lg:text-start"
             >
                 Посібник
-            </h1>
+            </h2>
 
             <!-- Mobile Slider -->
             <ClientOnly>
@@ -59,6 +59,7 @@
                     <a
                         href="https://t.me/touch_skill"
                         class="group block btn-purple-glow max-w-full lg:max-w-[150px] rounded-[25px] py-5 text-center sm:text-start sm:pl-[12px] sm:pb-[20px] sm:pr-[20px] sm:pt-[45px] w-full shrink-0 relative cursor-pointer"
+                        aria-label="Написати нам у Telegram"
                     >
                         <img
                             class="absolute top-1 right-1 hidden lg:block group-hover:top-3 group-hover:right-3 transition-all duration-500"

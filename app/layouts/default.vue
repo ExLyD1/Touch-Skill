@@ -43,7 +43,11 @@
                     сьогодні!
                 </h1>
 
-                <a href="https://t.me/touch_skill" class="w-fit">
+                <a
+                    href="https://t.me/touch_skill"
+                    aria-label="Написати нам у Telegram"
+                    class="w-fit"
+                >
                     <SplitButton label="Записатися на курс"
                 /></a>
             </div>

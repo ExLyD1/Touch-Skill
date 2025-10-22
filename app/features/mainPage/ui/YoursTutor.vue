@@ -6,12 +6,12 @@
         <div
             class="asideText flex flex-col gap-[5px] sm:gap-[30px] lg:max-w-[705px] w-full"
         >
-            <h1
+            <h2
                 data-aos="fade-up-right"
                 class="text-[32px] sm:text-[48px] font-[500] text-center sm:text-start"
             >
                 Ваш викладач
-            </h1>
+            </h2>
 
             <img
                 data-aos="flip-right"
@@ -36,6 +36,7 @@
                 <LabelText data-aos="fade-right">
                     <a
                         href="https://t.me/touch_skill"
+                        aria-label="Написати нам у Telegram"
                         target="_blank"
                         class="flex items-center gap-1"
                     >

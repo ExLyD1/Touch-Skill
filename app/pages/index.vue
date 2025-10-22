@@ -9,12 +9,12 @@
             <div
                 class="mt-[20px] sm:mt-[30px] flex flex-col gap-[15px] sm:gap-[30px] z-0"
             >
-                <h1
+                <h2
                     class="font-[600] text-[32px]/[34px] sm:text-[64px]/16 xl:w-[702px] w-full slide-left delay-[200ms]"
                     style="animation-delay: 0s"
                 >
                     Майстерність в кожному дотику
-                </h1>
+                </h2>
 
                 <p
                     class="text-[14px] sm:text-[24px] slide-left delay-[400ms]"
@@ -49,7 +49,11 @@
                     >
                 </div>
 
-                <a href="https://t.me/touch_skill" class="w-fit">
+                <a
+                    href="https://t.me/touch_skill"
+                    aria-label="Написати нам у Telegram"
+                    class="w-fit"
+                >
                     <SplitButton
                         style="animation-delay: 0.8s"
                         label="Записатися на курс"
@@ -100,7 +104,11 @@
                 </div>
             </div>
 
-            <a href="https://t.me/touch_skill" class="w-full sm:w-fit">
+            <a
+                href="https://t.me/touch_skill"
+                aria-label="Написати нам у Telegram"
+                class="w-full sm:w-fit"
+            >
                 <SplitButton
                     label="Записатися на курс"
                     class="!mt-10 buttMobile flex sm:hidden w-full"
@@ -161,11 +169,11 @@
                 <div
                     class="flex flex-col gap-[20px] items-center lg:items-start"
                 >
-                    <h1 class="font-bold text-black text-base sm:text-2xl">
+                    <h3 class="font-bold text-black text-base sm:text-2xl">
                         Студенти, які успішно завершили попередній рівень,
                         можуть перейти на наступний зі значною знижкою. В інших
                         випадках діє повна вартість курсу
-                    </h1>
+                    </h3>
 
                     <p class="text-sm sm:text-base">
                         При відмові продовжувати курс - кошти не повертаються
@@ -220,7 +228,10 @@
             <!-- Buttons -->
             <div class="flex flex-col gap-3 w-full">
                 <!-- Price button -->
-                <a href="https://t.me/touch_skill">
+                <a
+                    href="https://t.me/touch_skill"
+                    aria-label="Написати нам у Telegram"
+                >
                     <BasePriceButton
                         label="Купуй підручник у цифровому форматі - вивчай масаж будь-де!"
                         :old-price="550"
@@ -238,6 +249,7 @@
                 <!-- Buy button -->
                 <a
                     href="https://t.me/touch_skill"
+                    aria-label="Написати нам у Telegram"
                     class="relative flex items-center justify-center w-full rounded-2xl font-semibold text-xs text-white bg-purple p-2 hover:bg-purple-active transition-all shadow-md"
                 >
                     Придбати електронну книгу

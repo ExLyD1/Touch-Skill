@@ -3,12 +3,12 @@
         <div
             class="flex items-center justify-center sm:justify-between w-full text-center sm:text-start"
         >
-            <h1
+            <h2
                 data-aos="fade-up-right"
                 class="text-[32px] sm:text-[48px] font-[500] text-center sm:text-start"
             >
                 Часті запитання
-            </h1>
+            </h2>
 
             <p class="text-[#7B83B3] text-3xl hidden sm:block">FAQ</p>
         </div>

@@ -25,6 +25,7 @@
                 :key="item.alt"
                 target="_blank"
                 class="rounded-full bg-purple hover:bg-purple-active hover:shadow-md hover:shadow-purple-active transition-all duration-300 cursor-pointer p-2"
+                :aria-label="item.aria_label"
             >
                 <NuxtImg
                     :src="item.img"
@@ -64,21 +65,25 @@ const menuConfigMedia = [
         img: '/images/icons/telegram.svg',
         alt: 'telegram',
         href: 'https://t.me/touch_skill',
+        aria_label: 'Написати нам у Telegram',
     },
     {
         img: '/images/icons/instagram.svg',
         alt: 'instagram',
         href: 'https://www.instagram.com/massage_teacher_eu?igsh=MTUxYXlkN2NmcnQwMw%3D%3D&utm_source=qr',
+        aria_label: 'Написати нам у Instagram',
     },
     {
         img: '/images/icons/facebook.svg',
         alt: 'facebook',
         href: 'https://www.facebook.com/share/1EWGw15QwB/?mibextid=wwXIfr',
+        aria_label: 'Написати нам у Facebook',
     },
     {
         img: '/images/icons/email_white.svg',
         alt: 'threads',
         href: 'https://www.threads.com/@massage_teacher_eu?igshid=NTc4MTIwNjQ2YQ==',
+        aria_label: 'Написати нам у Threads',
     },
 ];
 </script>
