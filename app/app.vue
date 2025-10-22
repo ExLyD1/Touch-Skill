@@ -21,8 +21,6 @@ onUnmounted(() => {
 const baseUrl = 'https://touchskill.online';
 const pageUrl = `${baseUrl.replace(/\/$/, '')}/`;
 const ogImage = `${baseUrl.replace(/\/$/, '')}/images/general/logo.png`;
-console.log(pageUrl);
-console.log(ogImage);
 
 const title = 'ВЧИСЬ У ПРОФІ - БУДЬ ПРОФІ - TOUCH&SKILL';
 const description =
@@ -129,22 +127,24 @@ useHead({
     title,
     link: [
         { rel: 'canonical', href: pageUrl },
-        {
-            rel: 'icon',
-            href: '/images/general/logo.png',
-        },
-        {
-            rel: 'icon',
-            type: 'image/png',
-            sizes: '32x32',
-            href: '/images/general/logo32x32.svg',
-        },
-        {
-            rel: 'icon',
-            type: 'image/png',
-            sizes: '16x16',
-            href: '/images/general/logo16x16.svg',
-        },
+        { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' },
+        // {
+        //     rel: 'icon',
+        //     href: '/images/general/logo.png',
+        // },
+
+        // {
+        //     rel: 'icon',
+        //     type: 'image/png',
+        //     sizes: '32x32',
+        //     href: '/images/general/logo32x32.svg',
+        // },
+        // {
+        //     rel: 'icon',
+        //     type: 'image/png',
+        //     sizes: '16x16',
+        //     href: '/images/general/logo16x16.svg',
+        // },
         { rel: 'apple-touch-icon', href: '/images/general/logo16x16.svg' },
     ],
     meta: [
@@ -163,16 +163,15 @@ useHead({
         { property: 'og:type', content: 'product' },
         {
             property: 'og:title',
-            content: 'ВЧИСЬ У ПРОФІ - БУДЬ ПРОФІ - TOUCH&SKILL',
+            content: title,
         },
         {
             property: 'og:description',
-            content:
-                'курси професійного масажу | Варшава | Вивчай масаж за новим авторським підручником!',
+            content: description,
         },
         { property: 'og:url', content: pageUrl },
         { property: 'og:image', content: ogImage },
-        { property: 'og:site_name', content: 'Touch&Skill' },
+        { property: 'og:site_name', content: 'Touch Skill' },
         { property: 'og:locale', content: 'uk_UA' },
         { property: 'product:price:amount', content: price },
         { property: 'product:price:currency', content: currency },
@@ -180,12 +179,11 @@ useHead({
         { name: 'twitter:card', content: 'summary_large_image' },
         {
             name: 'twitter:title',
-            content: 'ВЧИСЬ У ПРОФІ - БУДЬ ПРОФІ - TOUCH&SKILL',
+            content: title,
         },
         {
             name: 'twitter:description',
-            content:
-                'курси професійного масажу | Варшава | Вивчай масаж за новим авторським підручником!',
+            content: description,
         },
         { name: 'twitter:image', content: ogImage },
     ],
