@@ -27,6 +27,10 @@ export default defineNuxtConfig({
 
     app: {
         head: {
+            htmlAttrs: {
+                lang: 'uk',
+            },
+
             link: [
                 { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
                 {
