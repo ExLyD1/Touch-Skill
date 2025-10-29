@@ -87,7 +87,7 @@
                     'bg-цршеу transition-all hover:bg-[#E6E6E6] duration-500 drop-shadow-[0_0_5px_#E6E6E6] hover:scale-105  hover:drop-shadow-[0_0_10px_#E6E6E6]':
                         package.styles.buttonBgColor === '#FFFFFF',
                 }"
-                aria-label="Написати нам у Telegram"
+                aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
             >
                 записатися на курс
 

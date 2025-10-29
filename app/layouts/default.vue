@@ -45,7 +45,7 @@
 
                 <a
                     href="https://t.me/touch_skill"
-                    aria-label="Написати нам у Telegram"
+                    aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
                     class="w-fit"
                 >
                     <SplitButton label="Записатися на курс"

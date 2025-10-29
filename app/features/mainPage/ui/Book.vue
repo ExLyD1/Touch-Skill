@@ -59,7 +59,7 @@
                     <a
                         href="https://t.me/touch_skill"
                         class="group block btn-purple-glow max-w-full lg:max-w-[150px] rounded-[25px] py-5 text-center sm:text-start sm:pl-[12px] sm:pb-[20px] sm:pr-[20px] sm:pt-[45px] w-full shrink-0 relative cursor-pointer"
-                        aria-label="Написати нам у Telegram"
+                        aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
                     >
                         <img
                             class="absolute top-1 right-1 hidden lg:block group-hover:top-3 group-hover:right-3 transition-all duration-500"

@@ -9,12 +9,12 @@
             <div
                 class="mt-[20px] sm:mt-[30px] flex flex-col gap-[15px] sm:gap-[30px] z-0"
             >
-                <h2
+                <h1
                     class="font-[600] text-[32px]/[34px] sm:text-[64px]/16 xl:w-[702px] w-full slide-left delay-[200ms]"
                     style="animation-delay: 0s"
                 >
-                    Майстерність в кожному дотику
-                </h2>
+                    Курси професійного масажу у Варшаві - Touch&Skill
+                </h1>
 
                 <p
                     class="text-[14px] sm:text-[24px] slide-left delay-[400ms]"
@@ -51,7 +51,7 @@
 
                 <a
                     href="https://t.me/touch_skill"
-                    aria-label="Написати нам у Telegram"
+                    aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
                     class="w-fit"
                 >
                     <SplitButton
@@ -106,7 +106,7 @@
 
             <a
                 href="https://t.me/touch_skill"
-                aria-label="Написати нам у Telegram"
+                aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
                 class="w-full sm:w-fit"
             >
                 <SplitButton
@@ -230,7 +230,7 @@
                 <!-- Price button -->
                 <a
                     href="https://t.me/touch_skill"
-                    aria-label="Написати нам у Telegram"
+                    aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
                 >
                     <BasePriceButton
                         label="Купуй підручник у цифровому форматі - вивчай масаж будь-де!"
@@ -249,7 +249,7 @@
                 <!-- Buy button -->
                 <a
                     href="https://t.me/touch_skill"
-                    aria-label="Написати нам у Telegram"
+                    aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
                     class="relative flex items-center justify-center w-full rounded-2xl font-semibold text-xs text-white bg-purple p-2 hover:bg-purple-active transition-all shadow-md"
                 >
                     Придбати електронну книгу

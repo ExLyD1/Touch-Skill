@@ -29,7 +29,7 @@
                     <div class="flex items-end gap-[20px] sm:gap-[50px] pt-6">
                         <a
                             href="https://t.me/touch_skill"
-                            aria-label="Написати нам у Telegram"
+                            aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
                             target="_blank"
                         >
                             <button

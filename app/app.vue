@@ -22,9 +22,12 @@ const baseUrl = 'https://touchskill.online';
 const pageUrl = `${baseUrl.replace(/\/$/, '')}/`;
 const ogImage = `${baseUrl.replace(/\/$/, '')}/images/general/logo.png`;
 
-const title = 'ВЧИСЬ У ПРОФІ - БУДЬ ПРОФІ - TOUCH&SKILL';
+const title =
+    'Курси масажу у Варшаві | Touch&Skill - Професійне навчання масажистів';
 const description =
-    'Курси професійного масажу | Варшава | Вивчай масаж за новим авторським підручником! Посібник для масажиста — авторський практичний довідник Іллі Шулежка. Техніки, анатомія, кольорові ілюстрації та практичні вправи. Купити електронну книгу — доставка миттєва, 249 грн. Завантажуй та вчися! Книга для початківців і практикуючих масажистів. Записуйся на курси масажу в Touch Skill! Знижки на навчання! ';
+    'Професійні курси масажу у Варшаві від Touch&Skill. Навчання класичного, спортивного, лімфодренажного масажу. Сертифікат, практика на реальних клієнтах, допомога з працевлаштуванням. Знижки при ранньому бронюванні!';
+const shortDescription =
+    'Курси професійного масажу у Варшаві. Базові та професійні програми навчання. Досвідчені викладачі, практика, сертифікат.';
 const price = '249';
 const currency = 'UAH';
 
@@ -82,45 +85,72 @@ const faqJsonLd = {
     mainEntity: [
         {
             '@type': 'Question',
-            name: 'У якому форматі доступна книга?',
+            name: 'Чи потрібен попередній досвід для навчання на курсі?',
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Електронна версія в форматі PDF та оптимізований Web-view для мобільних пристроїв.',
+                text: 'Ні, курс розрахований на людей з будь-яким рівнем підготовки.',
             },
         },
         {
             '@type': 'Question',
-            name: 'Як відбувається доставка купленої електронної книги?',
+            name: 'Як забронювати місце на курсі?',
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Після оплати на вашу пошту миттєво надходить посилання для завантаження, також доступ у особистому кабінеті.',
+                text: 'Для бронювання місця звяжіться з нами через Telegram. Кількість місць у групах обмежена.',
             },
         },
         {
             '@type': 'Question',
-            name: 'Чи є повернення коштів?',
+            name: 'Чи є можливість оплати за навчання частинами?',
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Повернення можливе протягом 14 днів за умови, що файл не був завантажений. Деталі — у політиці повернень.',
+                text: 'Так, ми пропонуємо гнучкі умови оплати.',
             },
         },
         {
             '@type': 'Question',
-            name: 'Чи підходить книга для початківців?',
+            name: 'Чи отримаю я сертифікат після закінчення курсу?',
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Так — книга створена для студентів, початківців і практикуючих масажистів; містить теорію та практичні вправи.',
+                text: 'Після успішного завершення кожного рівня та здачі екзамену ви отримуєте офіційний сертифікат.',
             },
         },
         {
             '@type': 'Question',
-            name: 'Чи отримаю я сертифікат після прочитання книги?',
+            name: 'Чи допоможете ви з працевлаштуванням?',
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Книга — навчальний посібник. Сертифікат видається після проходження офлайн/онлайн курсу, а не лише від прочитання книги.',
+                text: 'Ми активно підтримуємо наших випускників у пошуку роботи.',
             },
         },
     ],
+};
+
+const localBusinessJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    '@id': `${baseUrl}#organization`,
+    name: 'Touch&Skill',
+    description: shortDescription,
+    url: baseUrl,
+    logo: ogImage,
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Warsaw',
+        addressCountry: 'PL',
+    },
+    areaServed: { '@type': 'City', name: 'Warsaw' },
+};
+
+const courseJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    '@id': `${pageUrl}#course`,
+    name: 'Курси професійного масажу',
+    description: shortDescription,
+    provider: { '@type': 'Organization', name: 'Touch&Skill' },
+    educationalCredentialAwarded: 'Сертифікат',
+    inLanguage: 'uk',
 };
 
 useHead({
@@ -128,39 +158,25 @@ useHead({
     link: [
         { rel: 'canonical', href: pageUrl },
         { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' },
-        // {
-        //     rel: 'icon',
-        //     href: '/images/general/logo.png',
-        // },
-
-        // {
-        //     rel: 'icon',
-        //     type: 'image/png',
-        //     sizes: '32x32',
-        //     href: '/images/general/logo32x32.svg',
-        // },
-        // {
-        //     rel: 'icon',
-        //     type: 'image/png',
-        //     sizes: '16x16',
-        //     href: '/images/general/logo16x16.svg',
-        // },
         { rel: 'apple-touch-icon', href: '/images/general/logo16x16.svg' },
     ],
     meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: description },
-        { name: 'robots', content: 'index, follow' },
         {
-            name: 'keywords',
+            name: 'robots',
             content:
-                'Touch Skill, масаж, анатомія, масажист, практичний посібник, техніки масажу, довідник, посібник для масажиста, книга для масажиста, підручник для масажиста, навчання масажу, техніки масажу, анатомія для масажиста, масаж для початківців, електронна книга масаж, практичний довідник масажиста',
+                'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
         },
         { name: 'author', content: 'Шулежко Ілля Олександрович' },
+        { name: 'application-name', content: 'Touch&Skill' },
+        { name: 'theme-color', content: '#4914e7' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'geo.region', content: 'PL-MZ' },
+        { name: 'geo.placename', content: 'Warsaw' },
 
         { property: 'og:locale', content: 'uk_UA' },
-
-        { property: 'og:type', content: 'product' },
+        { property: 'og:type', content: 'website' },
         {
             property: 'og:title',
             content: title,
@@ -171,10 +187,13 @@ useHead({
         },
         { property: 'og:url', content: pageUrl },
         { property: 'og:image', content: ogImage },
-        { property: 'og:site_name', content: 'Touch Skill' },
-        { property: 'og:locale', content: 'uk_UA' },
-        { property: 'product:price:amount', content: price },
-        { property: 'product:price:currency', content: currency },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        {
+            property: 'og:image:alt',
+            content: 'Курси масажу Touch&Skill у Варшаві',
+        },
+        { property: 'og:site_name', content: 'Touch&Skill' },
 
         { name: 'twitter:card', content: 'summary_large_image' },
         {
@@ -198,6 +217,14 @@ useHead({
             innerHTML: JSON.stringify(breadcrumbJsonLd),
         },
         { type: 'application/ld+json', innerHTML: JSON.stringify(faqJsonLd) },
+        {
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify(localBusinessJsonLd),
+        },
+        {
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify(courseJsonLd),
+        },
     ],
 });
 </script>
