@@ -13,7 +13,7 @@
                     class="font-[600] text-[32px]/[34px] sm:text-[64px]/16 xl:w-[702px] w-full slide-left delay-[200ms]"
                     style="animation-delay: 0s"
                 >
-                    Курси професійного масажу у Варшаві - Touch&Skill
+                    Майстерність в кожному дотику
                 </h1>
 
                 <p
