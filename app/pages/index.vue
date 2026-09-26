@@ -13,50 +13,46 @@
                     class="font-[600] text-[32px]/[34px] sm:text-[64px]/16 xl:w-[702px] w-full slide-left delay-[200ms]"
                     style="animation-delay: 0s"
                 >
-                    Майстерність в кожному дотику
+                    {{ t('hero.title') }}
                 </h1>
 
                 <p
                     class="text-[14px] sm:text-[24px] slide-left delay-[400ms]"
                     style="animation-delay: 0.2s"
                 >
-                    Унікальна методика навчання <br />
-                    Тут не про "за 2 дні з нуля"
+                    {{ t('hero.subtitleLine1') }} <br />
+                    {{ t('hero.subtitleLine2') }}
                 </p>
 
                 <div class="flex flex-col gap-[10px]">
                     <LabelText
                         class="slide-left delay-[0.6s]"
                         style="animation-delay: 0.4s"
-                        ><img
-                            src="/images/icons/ready.svg"
-                            alt="tousch&skill-ready-image"
-                        />
+                        ><img src="/images/icons/ready.svg" alt="" />
                         <p class="text-lg sm:text-xl font-[700] pl-2">
-                            Випускаються тільки профі
+                            {{ t('hero.badgeGraduates') }}
                         </p></LabelText
                     >
                     <LabelText
                         class="slide-left delay-[0.8s]"
                         style="animation-delay: 0.6s"
-                        ><img
-                            src="/images/icons/ready.svg"
-                            alt="tousch&skill-ready-image"
-                        />
+                        ><img src="/images/icons/ready.svg" alt="" />
                         <p class="text-lg sm:text-xl font-[700] pl-2">
-                            Перші клієнти вже на курсі
+                            {{ t('hero.badgeClients') }}
                         </p></LabelText
                     >
                 </div>
 
                 <a
-                    href="https://t.me/touch_skill"
-                    aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
+                    :href="TELEGRAM_URL"
+                    target="_blank"
+                    rel="noopener"
+                    :aria-label="t('common.enrollAria')"
                     class="w-fit"
                 >
                     <SplitButton
                         style="animation-delay: 0.8s"
-                        label="Записатися на курс"
+                        :label="t('common.enroll')"
                         class="sm:mt-0 hidden sm:flex max-w-[300px] slide-left delay-[1s]"
                     />
                 </a>
@@ -69,7 +65,7 @@
                 <!-- Hands -->
                 <img
                     src="/images/general/logo_hands.png"
-                    alt="tousch&skill-logo-hands"
+                    alt=""
                     class="appear-animation"
                 />
 
@@ -78,12 +74,12 @@
                     <div class="touch-container">
                         <img
                             src="/images/general/touch.png"
-                            alt="tousch&skill-logo-touch"
+                            alt="Touch&Skill"
                             class="appear-animation"
                         />
                         <p class="touch-text text-touch-animation">
                             <span class="inline-block text-reveal"
-                                >Будь профі</span
+                                >{{ t('hero.touchTagline') }}</span
                             >
                         </p>
                     </div>
@@ -92,12 +88,12 @@
                     <div class="skill-container">
                         <p class="skill-text text-skill-animation">
                             <span class="inline-block text-reveal"
-                                >Вчись у профі</span
+                                >{{ t('hero.skillTagline') }}</span
                             >
                         </p>
                         <img
                             src="/images/general/skill.png"
-                            alt="tousch&skill-logo-skill"
+                            alt=""
                             class="appear-animation"
                         />
                     </div>
@@ -105,12 +101,14 @@
             </div>
 
             <a
-                href="https://t.me/touch_skill"
-                aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
+                :href="TELEGRAM_URL"
+                target="_blank"
+                rel="noopener"
+                :aria-label="t('common.enrollAria')"
                 class="w-full sm:w-fit"
             >
                 <SplitButton
-                    label="Записатися на курс"
+                    :label="t('common.enroll')"
                     class="!mt-10 buttMobile flex sm:hidden w-full"
                 />
             </a>
@@ -162,7 +160,7 @@
             >
                 <img
                     src="/images/general/procent.webp"
-                    alt="Touch Skill-procent-data-image"
+                    :alt="t('banner.imageAlt')"
                     class="2xl:flex-shrink-0 size-48 sm:size-auto lg:size-72 xl:size-auto"
                 />
 
@@ -170,20 +168,17 @@
                     class="flex flex-col gap-[20px] items-center lg:items-start"
                 >
                     <h3 class="font-bold text-black text-base sm:text-2xl">
-                        Студенти, які успішно завершили попередній рівень,
-                        можуть перейти на наступний зі значною знижкою. В інших
-                        випадках діє повна вартість курсу
+                        {{ t('banner.title') }}
                     </h3>
 
                     <p class="text-sm sm:text-base">
-                        При відмові продовжувати курс - кошти не повертаються
-                        (за виключенням підтверджених форс-мажорних обставин)
+                        {{ t('banner.note') }}
                     </p>
 
                     <div
                         class="font-bold text-white bg-purple rounded-xl p-3 sm:p-4 text-center w-fit"
                     >
-                        Є можливість оплати частинами
+                        {{ t('banner.installments') }}
                     </div>
                 </div>
             </div>
@@ -192,67 +187,49 @@
         <!-- Accordion FAQ Block -->
         <FAQ class="px-[15px] mt-[55px] sm:mt-[100px]" />
 
-        <!-- Advertisment -->
+        <!-- Advertisement: textbook on Etsy -->
         <div
             v-if="isAdvertismentVisible"
             data-aos="zoom-in"
-            class="fixed right-5 bottom-5 hidden sm:flex flex-col items-center gap-5 w-[328px] rounded-2xl p-4 border border-gray-400 bg-[#0048FF1A] backdrop-blur-md z-50 shadow-lg"
+            class="fixed left-4 right-4 bottom-4 sm:left-auto sm:right-5 sm:bottom-5 sm:w-[328px] flex flex-row sm:flex-col items-center gap-4 sm:gap-5 rounded-2xl p-4 border border-gray-400 bg-[#0048FF1A] backdrop-blur-md z-50 shadow-lg"
         >
             <!-- Close button -->
             <button
+                type="button"
                 @click="toggleAdvertisment"
                 class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center bg-[#5521F1] rounded-full hover:scale-105 transition-transform cursor-pointer"
+                :aria-label="t('ad.close')"
             >
-                <img
-                    src="/images/icons/close.svg"
-                    alt="Touch Skill-close-advertisment"
-                    class="w-4 h-4"
-                />
+                <img src="/images/icons/close.svg" alt="" class="w-4 h-4" />
             </button>
-
-            <!-- Title -->
-            <div
-                class="text-black text-2xl sm:text-3xl font-medium text-center pt-6"
-            >
-                Вивчай масаж <br />
-                за новим підручником
-            </div>
 
             <!-- Book image -->
             <img
                 src="/images/book/book.png"
-                alt="Touch Skill-book"
-                class="w-[200px] h-[168px] object-cover rounded-lg shadow-md"
+                :alt="t('ad.bookAlt')"
+                class="sm:order-2 w-[96px] h-[80px] sm:w-[200px] sm:h-[168px] object-cover rounded-lg shadow-md flex-shrink-0"
             />
 
-            <!-- Buttons -->
-            <div class="flex flex-col gap-3 w-full">
-                <!-- Price button -->
-                <a
-                    href="https://t.me/touch_skill"
-                    aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
+            <!-- On desktop these join the column: title, image, button -->
+            <div class="flex flex-col gap-3 flex-1 sm:contents">
+                <!-- Title -->
+                <p
+                    class="sm:order-1 text-black text-base sm:text-3xl font-medium sm:text-center pr-8 sm:pr-0 sm:pt-6"
                 >
-                    <BasePriceButton
-                        label="Купуй підручник у цифровому форматі - вивчай масаж будь-де!"
-                        :old-price="550"
-                        :current-price="249"
-                        size="xs"
-                        ><template #icon>
-                            <img
-                                src="/images/icons/favorite.svg"
-                                alt="Touch Skill-favorite-img"
-                                class="absolute -top-1 right-6"
-                                aria-hidden="true"
-                            /> </template></BasePriceButton
-                ></a>
+                    {{ t('ad.titleLine1') }} <br />
+                    {{ t('ad.titleLine2') }}
+                </p>
 
                 <!-- Buy button -->
                 <a
-                    href="https://t.me/touch_skill"
-                    aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
-                    class="relative flex items-center justify-center w-full rounded-2xl font-semibold text-xs text-white bg-purple p-2 hover:bg-purple-active transition-all shadow-md"
+                    :href="ETSY_SHOP_URL"
+                    target="_blank"
+                    rel="noopener"
+                    :aria-label="t('ad.buyAria')"
+                    class="sm:order-3 relative flex items-center justify-center w-full rounded-2xl font-semibold text-sm text-white bg-purple py-2.5 hover:bg-purple-active transition-all shadow-md"
+                    @click="useMixpanel().trackBuy()"
                 >
-                    Придбати електронну книгу
+                    {{ t('common.buy') }}
                 </a>
             </div>
         </div>
@@ -268,6 +245,14 @@ import Book from '~/features/mainPage/ui/Book.vue';
 import Reviews from '~/features/mainPage/ui/Reviews.vue';
 import PriceAndPackages from '~/features/mainPage/ui/PriceAndPackages.vue';
 import FAQ from '~/features/mainPage/ui/FAQ.vue';
+import { faqItems } from '~/features/mainPage/config/faqConfig';
+import {
+    packagesList,
+    parentsCoursePrices,
+} from '~/entities/mainPage/model/packagesConfig';
+
+const { t } = useI18n();
+const locale = useAppLocale();
 
 const isAdvertismentVisible = ref<boolean>(false);
 const toggleAdvertisment = () => {
@@ -277,6 +262,122 @@ const toggleAdvertisment = () => {
 onMounted(() => {
     useScroll().onScrollPercent(10, () => (isAdvertismentVisible.value = true));
 });
+
+// SEO
+const { pageUrl, imageUrl } = usePageSeo({
+    title: () => t('seo.home.title'),
+    description: () => t('seo.home.description'),
+    path: '/',
+    image: () => OG_IMAGES.home[locale.value],
+    imageAlt: () => t('seo.home.ogImageAlt'),
+});
+
+// Prices shown on the page: złoty on the Ukrainian version, euro on the English one
+const priceCurrency = computed(() => (locale.value === 'en' ? 'EUR' : 'PLN'));
+const inLanguage = computed(() => (locale.value === 'en' ? 'en-US' : 'uk-UA'));
+
+const courseInstance = {
+    '@type': 'CourseInstance',
+    courseMode: 'Onsite',
+    location: {
+        '@type': 'Place',
+        name: 'Touch&Skill',
+        address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Warszawa',
+            addressCountry: 'PL',
+        },
+    },
+    instructor: { '@id': TUTOR_ID },
+};
+
+const courseOffer = (price: number) => ({
+    '@type': 'Offer',
+    category: 'Paid',
+    price,
+    priceCurrency: priceCurrency.value,
+    availability: 'https://schema.org/InStock',
+    url: `${pageUrl.value}#packages`,
+});
+
+useStructuredData(() => [
+    {
+        '@type': 'WebPage',
+        '@id': `${pageUrl.value}#webpage`,
+        url: pageUrl.value,
+        name: t('seo.home.title'),
+        description: t('seo.home.description'),
+        inLanguage: inLanguage.value,
+        isPartOf: { '@id': WEBSITE_ID },
+        about: { '@id': ORGANIZATION_ID },
+        primaryImageOfPage: {
+            '@type': 'ImageObject',
+            url: imageUrl.value,
+            width: 1200,
+            height: 630,
+        },
+        breadcrumb: { '@id': `${pageUrl.value}#breadcrumb` },
+    },
+    {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl.value}#breadcrumb`,
+        itemListElement: [
+            {
+                '@type': 'ListItem',
+                position: 1,
+                name: t('nav.home'),
+                item: pageUrl.value,
+            },
+        ],
+    },
+    ...packagesList.map((item, index) => ({
+        '@type': 'Course',
+        '@id': `${pageUrl.value}#course-level-${index + 1}`,
+        name: `${item.stage[locale.value].replace(/:$/, '')} ${item.type[locale.value]}`,
+        description: item.servicesList[locale.value].join('. '),
+        inLanguage: inLanguage.value,
+        provider: { '@id': ORGANIZATION_ID },
+        educationalCredentialAwarded: t('seo.home.credential'),
+        hasCourseInstance: courseInstance,
+        offers: courseOffer(item.prices[locale.value].current),
+    })),
+    {
+        '@type': 'Course',
+        '@id': `${pageUrl.value}#course-parents`,
+        name: t('packages.parentsCourse'),
+        description: t('parents.intro'),
+        inLanguage: inLanguage.value,
+        provider: { '@id': ORGANIZATION_ID },
+        timeRequired: 'P2D',
+        hasCourseInstance: courseInstance,
+        offers: courseOffer(parentsCoursePrices[locale.value].current),
+    },
+    {
+        '@type': 'Book',
+        '@id': `${pageUrl.value}#book`,
+        name: t('seo.home.bookName'),
+        description: t('seo.home.bookDescription'),
+        author: { '@id': TUTOR_ID },
+        publisher: { '@id': ORGANIZATION_ID },
+        datePublished: '2025',
+        bookFormat: 'https://schema.org/EBook',
+        inLanguage: ['uk', 'en'],
+        image: `${SITE_URL}/images/book/book1.webp`,
+        url: ETSY_SHOP_URL,
+    },
+    {
+        '@type': 'FAQPage',
+        '@id': `${pageUrl.value}#faq`,
+        mainEntity: faqItems.map(item => ({
+            '@type': 'Question',
+            name: item.title[locale.value],
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.content[locale.value],
+            },
+        })),
+    },
+]);
 </script>
 
 <style scoped>
