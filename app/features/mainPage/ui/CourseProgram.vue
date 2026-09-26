@@ -4,7 +4,7 @@
             data-aos="fade-up-right"
             class="sm:text-[48px] text-[34px] sm:text-start text-center font-[500]"
         >
-            Програма курсу
+            {{ t('program.title') }}
         </h2>
 
         <div
@@ -13,6 +13,7 @@
             <PackageItem
                 :data-aos="dataAos(index)"
                 v-for="(item, index) in packagesList"
+                :key="index"
                 :package="item"
                 :is-detailed="false"
                 class="h-fit flex-shrink-0 2xl:max-w-[440px] max-w-full w-full"
@@ -22,35 +23,35 @@
                         v-if="index === 0"
                         class="absolute bottom-0 left-0 z-0 rounded-3xl"
                         src="/images/palms/course_palm1.png"
-                        alt="Touch Skill Palm Image"
+                        alt=""
                     />
 
                     <img
                         v-if="index === 0"
                         class="absolute left-0 top-0 z-0 rounded-3xl"
                         src="/images/palms/course_palm2.png"
-                        alt="Touch Skill Palm Image"
+                        alt=""
                     />
 
                     <img
                         v-if="index === 1"
                         class="absolute left-0 top-0 z-0 rounded-3xl"
                         src="/images/palms/course_palm3.png"
-                        alt="Touch Skill Palm Image"
+                        alt=""
                     />
 
                     <img
                         v-if="index === 1"
                         class="absolute bottom-0 right-0 z-0 rounded-3xl"
                         src="/images/palms/course_palm4.png"
-                        alt="Touch Skill Palm Image"
+                        alt=""
                     />
 
                     <img
                         v-if="index === 2"
                         class="absolute bottom-0 right-0 z-0 rounded-3xl"
                         src="/images/palms/course_palm5.png"
-                        alt="Touch Skill Palm Image"
+                        alt=""
                     />
                 </template>
             </PackageItem>
@@ -61,6 +62,8 @@
 <script lang="ts" setup>
 import PackageItem from '~/entities/mainPage/ui/PackageItem.vue';
 import { packagesList } from '~/entities/mainPage/model/packagesConfig';
+
+const { t } = useI18n();
 
 const dataAos = (index: number) => {
     switch (index) {

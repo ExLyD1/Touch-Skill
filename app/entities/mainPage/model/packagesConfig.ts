@@ -1,3 +1,5 @@
+import type { Localized } from '~/types/locale';
+
 export interface IPackageStyles {
     textColor: string;
     oldPriceColor: string;
@@ -9,29 +11,46 @@ export interface IPackageStyles {
     dividerColor: string;
 }
 
+// Amounts are in the locale's currency: złoty for UA, euro for EN
+export interface IPrice {
+    old: number;
+    current: number;
+}
+
 export interface IPackage {
-    stage: string;
-    type: string;
-    servicesList: string[];
-    oldPrice: number;
-    currentPrice: number;
+    stage: Localized<string>;
+    type: Localized<string>;
+    servicesList: Localized<string[]>;
+    prices: Localized<IPrice>;
     styles: IPackageStyles;
 }
 
 export const packagesList: IPackage[] = [
     {
-        stage: 'І ступінь:',
-        type: 'Класік (базовий курс)',
-        servicesList: [
-            'Вивчення анатомії та фізіології',
-            'Клініко-фізіологічне обґрунтування масажних прийомів',
-            'Прийоми класичного масажу',
-            'Розвиток тактильності та стереогнозії (рівень I)',
-            'Практика',
-            'Екзамен (теорія та практика)',
-        ],
-        oldPrice: 2980,
-        currentPrice: 1490,
+        stage: { uk: 'І ступінь:', en: 'Level I:' },
+        type: { uk: 'Класік (базовий курс)', en: 'Classic (basic course)' },
+        servicesList: {
+            uk: [
+                'Вивчення анатомії та фізіології',
+                'Клініко-фізіологічне обґрунтування масажних прийомів',
+                'Прийоми класичного масажу',
+                'Розвиток тактильності та стереогнозії (рівень I)',
+                'Практика',
+                'Екзамен (теорія та практика)',
+            ],
+            en: [
+                'Anatomy and physiology',
+                'Clinical and physiological rationale for massage techniques',
+                'Classic massage techniques',
+                'Developing tactile sensitivity and stereognosis (level I)',
+                'Practice',
+                'Exam (theory and practice)',
+            ],
+        },
+        prices: {
+            uk: { old: 2980, current: 1490 },
+            en: { old: 700, current: 350 },
+        },
         styles: {
             textColor: '#FFFFFF',
             oldPriceColor: '#BCBCBC',
@@ -44,22 +63,38 @@ export const packagesList: IPackage[] = [
         },
     },
     {
-        stage: 'ІІ ступінь:',
-        type: 'Класік+ (поглиблений)',
-        servicesList: [
-            'Вивчення анатомії та фізіології',
-            'Клініко-фізіологічне обґрунтуваннямасажних прийомів',
-            'Класичний масаж',
-            'Спортивний масаж',
-            'Лімфодренажний масаж',
-            'Дитячий масаж',
-            'Апаратні та допоміжні методи',
-            'Розвиток тактильності та стереогнозії (рівень II)',
-            'Практика',
-            'Екзамен (теорія та практика)',
-        ],
-        oldPrice: 4980,
-        currentPrice: 2490,
+        stage: { uk: 'ІІ ступінь:', en: 'Level II:' },
+        type: { uk: 'Класік+ (поглиблений)', en: 'Classic+ (advanced)' },
+        servicesList: {
+            uk: [
+                'Вивчення анатомії та фізіології',
+                'Клініко-фізіологічне обґрунтування масажних прийомів',
+                'Класичний масаж',
+                'Спортивний масаж',
+                'Лімфодренажний масаж',
+                'Дитячий масаж',
+                'Апаратні та допоміжні методи',
+                'Розвиток тактильності та стереогнозії (рівень II)',
+                'Практика',
+                'Екзамен (теорія та практика)',
+            ],
+            en: [
+                'Anatomy and physiology',
+                'Clinical and physiological rationale for massage techniques',
+                'Classic massage',
+                'Sports massage',
+                'Lymphatic drainage massage',
+                "Children's massage",
+                'Hardware and supplementary methods',
+                'Developing tactile sensitivity and stereognosis (level II)',
+                'Practice',
+                'Exam (theory and practice)',
+            ],
+        },
+        prices: {
+            uk: { old: 4980, current: 2490 },
+            en: { old: 1150, current: 575 },
+        },
         styles: {
             textColor: '#000000',
             oldPriceColor: '#5521F1',
@@ -72,19 +107,32 @@ export const packagesList: IPackage[] = [
         },
     },
     {
-        stage: 'ІІІ ступінь:',
-        type: 'Майстер (експертний рівень)',
-        servicesList: [
-            'Включає всі попередні ступені',
-            'Косметичний масаж',
-            'Міофасціальні ланцюги',
-            'Основи маркетингу масажного бізнесу',
-            'Розвиток тактильності та  стереогнозії (рівень III)',
-            'Практика',
-            'Екзамен (теорія, практика та перший платний клієнт)',
-        ],
-        oldPrice: 6980,
-        currentPrice: 3490,
+        stage: { uk: 'ІІІ ступінь:', en: 'Level III:' },
+        type: { uk: 'Майстер (експертний рівень)', en: 'Master (expert level)' },
+        servicesList: {
+            uk: [
+                'Включає всі попередні ступені',
+                'Косметичний масаж',
+                'Міофасціальні ланцюги',
+                'Основи маркетингу масажного бізнесу',
+                'Розвиток тактильності та стереогнозії (рівень III)',
+                'Практика',
+                'Екзамен (теорія, практика та перший платний клієнт)',
+            ],
+            en: [
+                'Includes all previous levels',
+                'Cosmetic massage',
+                'Myofascial chains',
+                'Marketing basics for a massage business',
+                'Developing tactile sensitivity and stereognosis (level III)',
+                'Practice',
+                'Exam (theory, practice and your first paying client)',
+            ],
+        },
+        prices: {
+            uk: { old: 6980, current: 3490 },
+            en: { old: 1600, current: 800 },
+        },
         styles: {
             textColor: '#FFFFFF',
             oldPriceColor: '#BCBCBC',
@@ -97,3 +145,8 @@ export const packagesList: IPackage[] = [
         },
     },
 ];
+
+export const parentsCoursePrices: Localized<IPrice> = {
+    uk: { old: 580, current: 290 },
+    en: { old: 130, current: 65 },
+};

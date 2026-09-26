@@ -1,5 +1,11 @@
 <template>
-    <div>
+    <div class="relative">
+        <SectionDecoration
+            src="/images/palms/palms_faq.webp"
+            side="right"
+            class="top-[-370px] hidden sm:block"
+        />
+
         <div
             class="flex items-center justify-center sm:justify-between w-full text-center sm:text-start"
         >
@@ -7,7 +13,7 @@
                 data-aos="fade-up-right"
                 class="text-[32px] sm:text-[48px] font-[500] text-center sm:text-start"
             >
-                Часті запитання
+                {{ t('faq.title') }}
             </h2>
 
             <p class="text-[#7B83B3] text-3xl hidden sm:block">FAQ</p>
@@ -20,7 +26,8 @@
                 type="single"
                 class="w-full border-t sm:border-y border-black text-black"
                 collapsible
-                v-for="(accordion, index) in [accordionItems1, accordionItems2]"
+                v-for="(accordion, index) in accordionColumns"
+                :key="index"
                 :class="{ 'border-b': index === 1 }"
             >
                 <AccordionItem
@@ -53,7 +60,7 @@
                                 <span
                                     class="text-[12px] sm:text-2xl text-left font-semibold flex-1"
                                 >
-                                    {{ item.title }}
+                                    {{ item.title[locale] }}
                                 </span>
                             </div>
                         </div>
@@ -61,7 +68,7 @@
                     <AccordionContent
                         class="pb-6 px-0 text-black text-sm sm:text-xl"
                     >
-                        {{ item.content }}
+                        {{ item.content[locale] }}
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>
@@ -76,54 +83,13 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from '~/components/ui/accordion';
+import { faqItems } from '../config/faqConfig';
 
-const accordionItems1 = [
-    {
-        number: 1,
-        value: 'item-1',
-        title: 'Чи потрібен попередній досвід для навчання на курсі?',
-        content:
-            'Ні, курс підходить як для початківців, так і для тих, хто вже має базові знання або досвід.',
-    },
-    {
-        number: 2,
-        value: 'item-2',
-        title: 'Як забронювати місце на курсі?',
-        content:
-            'Щоб забронювати місце, зв’яжіться з нами через телефон або напишіть у телеграм (контакти на сайті).',
-    },
-    {
-        number: 3,
-        value: 'item-3',
-        title: 'Який розклад занять?',
-        content:
-            'Точний розклад складається окремо до кожної групи або індивідуального заняття.',
-    },
-];
+const { t } = useI18n();
+const locale = useAppLocale();
 
-const accordionItems2 = [
-    {
-        number: 4,
-        value: 'item-4',
-        title: 'Чи є можливість оплати за навчання частинами?',
-        content:
-            'Так, ми пропонуємо можливість розбити оплату курсу на частини.',
-    },
-    {
-        number: 5,
-        value: 'item-5',
-        title: 'Чи надається підтримка після завершення курсу?',
-        content:
-            'Так, ми забезпечуємо онлайн підтримку після закінчення навчання. Ви завжди можете звернутися за консультаціями.',
-    },
-    {
-        number: 6,
-        value: 'item-6',
-        title: 'Чи є знижки на курси?',
-        content:
-            'Так, при переході на іншу ступінь навчання враховується знижка 15%.',
-    },
-];
+// Two accordion columns of three questions each
+const accordionColumns = [faqItems.slice(0, 3), faqItems.slice(3)];
 </script>
 
 <style scoped>

@@ -11,7 +11,7 @@
         >
             <img
                 src="/images/icons/arrow_top.svg"
-                alt="skill&touch_arrow_top"
+                alt=""
             />
         </div>
     </div>
