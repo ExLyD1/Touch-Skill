@@ -1,12 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
+<urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
   <url>
     <loc>https://touchskill.online/</loc>
-    <lastmod>2025-10-10</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://touchskill.online/" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://touchskill.online/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://touchskill.online/" />
+    <image:image>
+      <image:loc>https://touchskill.online/images/og/og-home-uk.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/general/about_new.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/general/your_tutor.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/book/book1.webp</image:loc>
+    </image:image>
   </url>
-
+  <url>
+    <loc>https://touchskill.online/en</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://touchskill.online/" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://touchskill.online/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://touchskill.online/" />
+    <image:image>
+      <image:loc>https://touchskill.online/images/og/og-home-en.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/general/about_new.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/general/your_tutor.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/book/book1.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://touchskill.online/education-materials</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://touchskill.online/education-materials" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://touchskill.online/en/education-materials" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://touchskill.online/education-materials" />
+    <image:image>
+      <image:loc>https://touchskill.online/images/og/og-materials-uk.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/education_materials/image_one_ukr.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://touchskill.online/en/education-materials</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://touchskill.online/education-materials" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://touchskill.online/en/education-materials" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://touchskill.online/education-materials" />
+    <image:image>
+      <image:loc>https://touchskill.online/images/og/og-materials-en.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/education_materials/image_one_eng.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/education_materials/image_two_eng.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/education_materials/image_three_eng.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://touchskill.online/images/education_materials/image_four_eng.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
