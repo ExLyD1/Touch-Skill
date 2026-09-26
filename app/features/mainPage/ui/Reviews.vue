@@ -7,7 +7,7 @@
                     data-aos="fade-up-right"
                     class="text-[48px] font-[500] px-[25px] text-start"
                 >
-                    Відгуки
+                    {{ t('reviews.title') }}
                 </h2>
 
                 <!-- Custom Navigation Arrows -->
@@ -18,7 +18,7 @@
                         data-aos="fade-right"
                         @click="goPrev"
                         class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white text-[#606060] flex items-center justify-center cursor-pointer transition-all duration-300 shadow-lg hover:bg-purple hover:text-white hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0"
-                        aria-label="Previous slide"
+                        :aria-label="t('guide.previousSlide')"
                     >
                         <svg
                             class="w-6 h-6"
@@ -37,7 +37,7 @@
                         data-aos="fade-left"
                         @click="goNext"
                         class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white text-[#606060] flex items-center justify-center cursor-pointer transition-all duration-300 shadow-lg hover:bg-purple hover:text-white hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0"
-                        aria-label="Next slide"
+                        :aria-label="t('guide.nextSlide')"
                     >
                         <svg
                             class="w-6 h-6"
@@ -59,14 +59,14 @@
                 <h2
                     class="text-[32px] font-[500] px-[25px] pb-[30px] text-center"
                 >
-                    Відгуки
+                    {{ t('reviews.title') }}
                 </h2>
 
                 <!-- Mobile Slider -->
                 <Splide
                     ref="splideRefMobile"
                     :options="splideOptionsMobile"
-                    aria-label="Book Slider"
+                    :aria-label="t('reviews.sliderLabel')"
                     data-aos="zoom-in"
                     class="mb-[10px] block sm:hidden"
                 >
@@ -85,7 +85,7 @@
                         data-aos="fade-right"
                         @click="goPrevMobile"
                         class="w-12 h-12 rounded-xl bg-white text-[#606060] flex items-center justify-center cursor-pointer drop-shadow-lg transition-all duration-300 shadow-lg hover:bg-purple hover:text-white hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0"
-                        aria-label="Previous slide"
+                        :aria-label="t('guide.previousSlide')"
                     >
                         <svg
                             class="w-6 h-6"
@@ -104,7 +104,7 @@
                         data-aos="fade-left"
                         @click="goNextMobile"
                         class="w-12 h-12 rounded-xl bg-white text-[#606060] flex items-center justify-center cursor-pointer drop-shadow-lg transition-all duration-300 shadow-lg hover:bg-purple hover:text-white hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0"
-                        aria-label="Next slide"
+                        :aria-label="t('guide.nextSlide')"
                     >
                         <svg
                             class="w-6 h-6"
@@ -126,7 +126,7 @@
         <Splide
             ref="splideRef"
             :options="splideOptionsDesktop"
-            aria-label="Book Slider"
+            :aria-label="t('reviews.sliderLabel')"
             data-aos="zoom-in"
             class="justify-center items-center hidden sm:flex pt-4"
         >
@@ -149,6 +149,8 @@ import { reviewsList } from '../config/reviewsConfig';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 // @ts-ignore
 import '@splidejs/vue-splide/css';
+
+const { t } = useI18n();
 
 const splideRef = ref<any>(null);
 const splideRefMobile = ref<any>(null);

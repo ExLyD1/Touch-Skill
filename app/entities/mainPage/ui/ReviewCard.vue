@@ -6,12 +6,12 @@
         <div class="flex items-start gap-4 mb-4">
             <img
                 :src="review.image"
-                :alt="review.name"
+                :alt="review.name[locale]"
                 class="w-16 h-16 rounded-2xl object-cover flex-shrink-0"
             />
             <div class="flex-1 min-w-0">
                 <h3 class="font-medium text-lg mb-1 truncate">
-                    {{ review.name }}
+                    {{ review.name[locale] }}
                 </h3>
                 <div class="flex gap-0.5 mb-1">
                     <svg
@@ -30,14 +30,18 @@
         </div>
 
         <!-- Review Text -->
-        <p class="leading-relaxed text-gray-700 flex-1">
-            {{ review.text }}
+        <p class="leading-relaxed text-gray-700 flex-1 whitespace-pre-line">
+            {{ review.text[locale] }}
         </p>
     </div>
 </template>
 
 <script lang="ts" setup>
+import type { IReview } from '~/features/mainPage/config/reviewsConfig';
+
 defineProps<{
-    review: any;
+    review: IReview;
 }>();
+
+const locale = useAppLocale();
 </script>
