@@ -3,10 +3,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "build": "NODE_OPTIONS=\"--import=./scripts/node-webstorage-shim.mjs\" nuxt build",
+    "dev": "NODE_OPTIONS=\"--import=./scripts/node-webstorage-shim.mjs\" nuxt dev",
+    "generate": "NODE_OPTIONS=\"--import=./scripts/node-webstorage-shim.mjs\" nuxt generate",
+    "preview": "NODE_OPTIONS=\"--import=./scripts/node-webstorage-shim.mjs\" nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
