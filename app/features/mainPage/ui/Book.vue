@@ -1,7 +1,13 @@
 <template>
     <div
-        class="flex flex-col lg:flex-row items-start justify-between lg:items-end gap-8 lg:gap-12"
+        class="relative flex flex-col lg:flex-row items-start justify-between lg:items-end gap-8 lg:gap-12"
     >
+        <SectionDecoration
+            src="/images/palms/palms_book.webp"
+            side="right"
+            class="top-[-290px] hidden sm:block"
+        />
+
         <!-- Desktop Slider -->
         <ClientOnly> <BookSlider class="sm:block hidden" /> </ClientOnly>
 
@@ -13,7 +19,7 @@
                 data-aos="fade-up-left"
                 class="text-[32px] sm:text-[48px] font-[500] text-center lg:text-start"
             >
-                Посібник
+                {{ t('guide.title') }}
             </h2>
 
             <!-- Mobile Slider -->
@@ -22,55 +28,51 @@
             </ClientOnly>
 
             <p data-aos="zoom-in" class="text-sm sm:text-lg leading-relaxed">
-                Підручник «Посібник для масажиста. Авторський практичний
-                довідник» створений для студентів, початківців і практикуючих
-                масажистів, які прагнуть поглибити або освіжити свої знання та
-                вдосконалити практичні навички. У виданні доступно і
-                структуровано викладені основні техніки масажу,
-                анатомо-фізіологічні основи процедур, показання та
-                протипоказання, а також особливості роботи з різними групами
-                клієнтів. Матеріал подано з орієнтацією на сучасні вимоги до
-                фахівців у сфері здоров'я та реабілітації. Особливу увагу
-                приділено анатомії, з чіткими кольоровими ілюстраціями для
-                ретельного вивчення теоретичної бази. Підручник може бути
-                використаний як базова навчальна література для курсів масажу, а
-                також для самостійної підготовки
+                {{ t('guide.text') }}
             </p>
 
             <div
-                class="flex flex-col sm:flex-row items-stretch sm:items-center sm:max-h-[104px] h-full gap-4"
+                class="flex flex-col sm:flex-row items-stretch gap-3 sm:gap-[10px] sm:h-[100px]"
             >
-                <div data-aos="fade-right" class="flex-grow">
-                    <BasePriceButton
-                        @click="
-                            () => {
-                                useMixpanel().trackBuy();
-                            }
-                        "
-                        :disabled="loading"
-                        label="Для замовлення підручника зв'яжіться з нашим менеджером"
-                        :old-price="550"
-                        :current-price="249"
-                        :size="isSmallScreen === false ? 'lg' : 'sm'"
-                        custom-gap="64px"
+                <!-- Contact a manager -->
+                <a
+                    data-aos="fade-right"
+                    :href="TELEGRAM_URL"
+                    target="_blank"
+                    rel="noopener"
+                    :aria-label="t('guide.contactManagerAria')"
+                    class="group btn-purple-glow relative flex items-center sm:items-end justify-center sm:justify-start shrink-0 sm:w-[150px] rounded-[25px] py-5 sm:py-0 sm:pl-3 sm:pr-4 sm:pb-[14px] text-center sm:text-start"
+                >
+                    <img
+                        class="absolute top-2 right-2 hidden sm:block group-hover:top-3 group-hover:right-3 transition-all duration-500"
+                        src="/images/icons/arrow_down.svg"
+                        alt=""
                     />
-                </div>
-                <div class="shrink-0" data-aos="fade-left">
-                    <a
-                        href="https://t.me/touch_skill"
-                        class="group block btn-purple-glow max-w-full lg:max-w-[150px] rounded-[25px] py-5 text-center sm:text-start sm:pl-[12px] sm:pb-[20px] sm:pr-[20px] sm:pt-[45px] w-full shrink-0 relative cursor-pointer"
-                        aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
-                    >
-                        <img
-                            class="absolute top-1 right-1 hidden lg:block group-hover:top-3 group-hover:right-3 transition-all duration-500"
-                            src="/images/icons/arrow_down.svg"
-                            alt="Touch Skill-arrow-down"
-                        />
-                        <p class="font-bold text-white">
-                            Зв'язатися з менеджером
-                        </p>
-                    </a>
-                </div>
+                    <span class="font-bold text-white text-sm leading-tight">
+                        {{ t('guide.contactManager') }}
+                    </span>
+                </a>
+
+                <!-- Buy the textbook -->
+                <a
+                    data-aos="fade-left"
+                    :href="ETSY_SHOP_URL"
+                    target="_blank"
+                    rel="noopener"
+                    :aria-label="t('guide.promoAria')"
+                    class="btn-purple-glow relative flex items-center flex-1 sm:max-w-[470px] rounded-[25px] px-8 sm:px-12 py-6 sm:py-0"
+                    @click="useMixpanel().trackBuy()"
+                >
+                    <img
+                        src="/images/icons/favorite.svg"
+                        alt=""
+                        aria-hidden="true"
+                        class="absolute -top-1 right-10"
+                    />
+                    <span class="text-white font-medium text-sm sm:text-[15px]">
+                        {{ t('guide.promo') }}
+                    </span>
+                </a>
             </div>
         </div>
     </div>
@@ -78,11 +80,6 @@
 
 <script lang="ts" setup>
 import BookSlider from '~/components/BookSlider.vue';
-import { useMediaQuery } from '#imports';
 
-const isSmallScreen = useMediaQuery('(max-width:1024px)');
-
-const loading = ref(false);
+const { t } = useI18n();
 </script>
-
-<style scoped></style>

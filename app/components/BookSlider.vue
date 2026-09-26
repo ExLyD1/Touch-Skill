@@ -2,26 +2,10 @@
     <div
         class="w-full lg:w-1/2 xl:w-[600px] relative flex-shrink-0 pb-12 sm:pb-0 flex flex-col"
     >
-        <!-- <Splide
-            ref="splideRef"
-            :options="splideOptions"
-            aria-label="Book Slider"
-        >
-            <SplideSlide v-for="(img, index) in imagesList" :key="index">
-                <div class="w-full h-full flex justify-center items-center">
-                    <NuxtImg
-                        :src="img.url"
-                        :alt="`Book ${index + 1}`"
-                        class="w-full h-auto max-h-[500px] lg:max-h-[600px] object-contain rounded-lg"
-                    />
-                </div>
-            </SplideSlide>
-        </Splide> -->
-
         <Splide
             ref="splideRef"
             :options="splideOptions"
-            aria-label="Book Slider"
+            :aria-label="t('guide.sliderLabel')"
             class="w-full"
         >
             <SplideSlide
@@ -32,7 +16,7 @@
                 <div>
                     <img
                         :src="img.url"
-                        :alt="`Book ${index + 1}`"
+                        :alt="`${t('guide.pageAlt')} ${index + 1}`"
                         class="h-auto w-full object-fill max-w-[400px] max-h-[458px] sm:max-w-[574px] sm:max-h-[590px]"
                         :style="{
                             width: isSmallScreen ? `${img.width}px` : 'auto',
@@ -51,7 +35,7 @@
                 data-aos="fade-right"
                 @click="goPrev"
                 class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white text-[#606060] flex items-center justify-center cursor-pointer transition-all duration-300 shadow-lg hover:bg-purple hover:text-white hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0"
-                aria-label="Previous slide"
+                :aria-label="t('guide.previousSlide')"
             >
                 <svg
                     class="w-6 h-6"
@@ -70,7 +54,7 @@
                 data-aos="fade-left"
                 @click="goNext"
                 class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white text-[#606060] flex items-center justify-center cursor-pointer transition-all duration-300 shadow-lg hover:bg-purple hover:text-white hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0"
-                aria-label="Next slide"
+                :aria-label="t('guide.nextSlide')"
             >
                 <svg
                     class="w-6 h-6"
@@ -95,6 +79,8 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
 
 import { useMediaQuery } from '#imports';
+
+const { t } = useI18n();
 const isSmallScreen = useMediaQuery('(max-width:640px)');
 
 const splideRef = ref<any>(null);
