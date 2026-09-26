@@ -15,10 +15,7 @@
             v-if="isMenuVisible"
             :is-open="isMenuVisible"
             :is-trigger="isTriggerAnimation"
-            @scrolling="(id:string) => {
-                toggleMenuVisibility();
-                scrollToElement(id)
-            }"
+            @navigate="onMenuNavigate"
             class="fixed w-full top-16 z-50 overflow-hidden! bg-white"
         />
 
@@ -34,81 +31,51 @@
                 data-aos="zoom-in"
                 class="max-w-[860px] w-full flex flex-col gap-[30px] items-center justify-center"
             >
-                <h1
+                <h2
                     data-aos="zoom-in"
                     class="text-[18px]/[100%] sm:text-5xl font-semibold text-center"
                 >
-                    Вчись у профі - будь <span class="text-purple">профі</span>!
-                    Записуйся на <span class="text-purple">курс</span> вже
-                    сьогодні!
-                </h1>
+                    <i18n-t keypath="cta.text" scope="global">
+                        <template #pro>
+                            <span class="text-purple">{{ t('cta.proWord') }}</span>
+                        </template>
+                        <template #course>
+                            <span class="text-purple">{{
+                                t('cta.courseWord')
+                            }}</span>
+                        </template>
+                    </i18n-t>
+                </h2>
 
                 <a
-                    href="https://t.me/touch_skill"
-                    aria-label="Придбати електронну книгу про техніки масажу у Telegram від Touch&Skill"
+                    :href="TELEGRAM_URL"
+                    target="_blank"
+                    rel="noopener"
+                    :aria-label="t('common.enrollAria')"
                     class="w-fit"
                 >
-                    <SplitButton label="Записатися на курс"
+                    <SplitButton :label="t('common.enroll')"
                 /></a>
             </div>
         </div>
 
         <Footer />
 
-        <ClientOnly>
-            <img
-                src="/images/general/parents_image.webp"
-                alt="Touch Skill-parents-image"
-                class="baby-image absolute right-0 top-[2525.08px] -z-10"
-        /></ClientOnly>
-
-        <img
-            src="/images/palms/palms_about.webp"
-            alt="Touch Skill-parents-image"
-            class="absolute right-0 top-[744px] hidden sm:block -z-10"
-        />
-
-        <img
-            src="/images/palms/palms_about_mobile.webp"
-            alt="Touch Skill-parents-image"
-            class="absolute right-0 top-[1055px] block sm:hidden -z-10"
-        />
-
-        <img
-            src="/images/palms/palms_parent.webp"
-            alt="Touch Skill-parents-image"
-            class="absolute left-0 top-[3175.08px] hidden sm:block -z-10"
-        />
-
-        <img
-            src="/images/palms/palms_book.webp"
-            alt="Touch Skill-parents-image"
-            class="absolute right-0 top-[3900px] hidden sm:block -z-10"
-        />
-
-        <img
-            src="/images/palms/palms_faq.webp"
-            alt="Touch Skill-parents-image"
-            class="absolute right-0 top-[6838px] hidden sm:block -z-10"
-        />
-
-        <img
-            src="/images/palms/palms_tutor_mobile_left.webp"
-            alt="Touch Skill-parents-image"
-            class="palm_tutor absolute left-0 top-[4324px] block sm:hidden -z-10"
-        />
-
-        <img
-            src="/images/palms/palms_tutor_mobile_right.webp"
-            alt="Touch Skill-parents-image"
-            class="palm_tutor absolute right-0 top-[4324px] block sm:hidden -z-10"
-        />
     </div>
 </template>
 
 <script lang="ts" setup>
 import Header from '~/features/layout/ui/Header.vue';
 import Footer from '~/features/layout/ui/Footer.vue';
+import type { NavigationTarget } from '~/features/layout/config/navigationConfig';
+
+const { t } = useI18n();
+
+const route = useRoute();
+const { goTo } = useSiteNavigation();
+
+// Duration of the mobile menu close animation
+const MENU_CLOSE_MS = 700;
 
 const isMenuVisible = ref<boolean>(false);
 const isTriggerAnimation = ref<boolean>(false);
@@ -125,9 +92,32 @@ const toggleMenuVisibility = () => {
         setTimeout(() => {
             isTriggerAnimation.value = false;
             isMenuVisible.value = false;
-        }, 700);
+        }, MENU_CLOSE_MS);
     }
 };
+
+const onMenuNavigate = (target: NavigationTarget) => {
+    toggleMenuVisibility();
+
+    if (target.type === 'page') {
+        goTo(target);
+        return;
+    }
+
+    // Scroll only once the menu is gone: page scrolling is locked while it is
+    // open, and closing it restores the header spacer, which shifts the page
+    setTimeout(() => goTo(target), MENU_CLOSE_MS);
+};
+
+// Close the mobile menu after any navigation, e.g. a language switch
+watch(
+    () => route.fullPath,
+    () => {
+        if (isMenuVisible.value && !isTriggerAnimation.value) {
+            toggleMenuVisibility();
+        }
+    }
+);
 
 // Блокування скролу сторінки
 watch(
@@ -152,22 +142,6 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.baby-image {
-    border-radius: 20px;
-    mask-image: radial-gradient(
-        ellipse 40% 40% at center,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 1) 80%,
-        rgba(0, 0, 0, 0) 100%
-    );
-    -webkit-mask-image: radial-gradient(
-        ellipse 40% 40% at center,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 1) 80%,
-        rgba(0, 0, 0, 0) 100%
-    );
-}
-
 .profi {
     position: relative;
     background-image: url('/images/general/profi.webp');
@@ -197,24 +171,6 @@ onMounted(async () => {
     mask-size: cover;
 }
 
-@media screen and (max-width: 1536px) {
-    .baby-image {
-        top: 3500px;
-    }
-}
-
-@media screen and (max-width: 1340px) {
-    .baby-image {
-        top: 3600px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .baby-image {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 640px) {
     .profi {
         background-size: cover;
@@ -232,35 +188,6 @@ onMounted(async () => {
             rgba(0, 0, 0, 1) 80%,
             rgba(0, 0, 0, 0.2) 100%
         );
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .palm_tutor {
-        top: 4424px;
-    }
-}
-
-@media screen and (max-width: 376px) {
-    .palm_tutor {
-        top: 4524px;
-    }
-}
-
-@media screen and (max-width: 368px) {
-    .palm_tutor {
-        top: 4624px;
-    }
-}
-
-@media screen and (max-width: 358px) {
-    .palm_tutor {
-        top: 4724px;
-    }
-}
-@media screen and (max-width: 325px) {
-    .palm_tutor {
-        top: 4824px;
     }
 }
 </style>

@@ -16,14 +16,14 @@
                 >
                     <NuxtImg
                         :src="item.img"
-                        :alt="item.alt"
+                        alt=""
                         height="25"
                         width="25"
                         :lazy="false"
                         class="flex-shrink-0"
                     />
                     <p class="sm:text-xl text-sm whitespace-nowrap">
-                        {{ item.label }}
+                        {{ item.labelKey ? t(item.labelKey) : item.label }}
                     </p>
                 </div>
             </div>
@@ -35,8 +35,9 @@
                     :href="item.href"
                     :key="item.alt"
                     target="_blank"
+                    rel="noopener"
                     class="w-full rounded-full bg-white hover:shadow-md hover:shadow-[#E6E6E6] transition-all hover:bg-[#E6E6E6] duration-500 drop-shadow-[0_0_5px_#E6E6E6] hover:scale-105 hover:drop-shadow-[0_0_10px_#E6E6E6] cursor-pointer p-2"
-                    :aria-label="item.aria_label"
+                    :aria-label="t(item.ariaKey)"
                 >
                     <NuxtImg
                         :src="item.img"
@@ -59,9 +60,10 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
 const year = computed(() => new Date().getFullYear());
 
-const footerConfig = [
+const footerConfig: { img: string; alt: string; label?: string; labelKey?: string }[] = [
     {
         img: '/images/icons/phone.svg',
         alt: 'phone',
@@ -70,7 +72,7 @@ const footerConfig = [
     {
         img: '/images/icons/clock.svg',
         alt: 'clock',
-        label: 'пн - сб: 9:00 - 18:00',
+        labelKey: 'footer.hours',
     },
     {
         img: '/images/icons/map.svg',
@@ -83,26 +85,26 @@ const footerConfigMedia = [
     {
         img: '/images/icons/telegram_purple.svg',
         alt: 'telegram',
-        href: 'https://t.me/touch_skill',
-        aria_label: 'Написати нам у Telegram',
+        href: TELEGRAM_URL,
+        ariaKey: 'social.telegram',
     },
     {
         img: '/images/icons/instagram_purple.svg',
         alt: 'instagram',
-        href: 'https://www.instagram.com/massage_teacher_eu?igsh=MTUxYXlkN2NmcnQwMw%3D%3D&utm_source=qr',
-        aria_label: 'Написати нам у Instagram',
+        href: INSTAGRAM_URL,
+        ariaKey: 'social.instagram',
     },
     {
         img: '/images/icons/facebook_purple.svg',
         alt: 'facebook',
-        href: 'https://www.facebook.com/share/1EWGw15QwB/?mibextid=wwXIfr',
-        aria_label: 'Написати нам у Facebook',
+        href: FACEBOOK_URL,
+        ariaKey: 'social.facebook',
     },
     {
         img: '/images/icons/email.svg',
         alt: 'threads',
-        href: 'https://www.threads.com/@massage_teacher_eu?igshid=NTc4MTIwNjQ2YQ==',
-        aria_label: 'Написати нам у Threads',
+        href: THREADS_URL,
+        ariaKey: 'social.threads',
     },
 ];
 </script>
