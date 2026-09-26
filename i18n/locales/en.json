@@ -1,0 +1,137 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About the course",
+        "program": "Course program",
+        "materials": "Educational materials",
+        "parents": "For parents",
+        "tutor": "About the tutor",
+        "guide": "Manual",
+        "prices": "Prices"
+    },
+    "header": {
+        "logoAlt": "Touch&Skill logo",
+        "toggleMenu": "Open or close the menu",
+        "language": "Site language"
+    },
+    "social": {
+        "telegram": "Message us on Telegram",
+        "instagram": "Message us on Instagram",
+        "facebook": "Message us on Facebook",
+        "threads": "Message us on Threads"
+    },
+    "common": {
+        "enroll": "Enroll in the course",
+        "enrollAria": "Enroll in a Touch&Skill course on Telegram",
+        "buy": "BUY"
+    },
+    "hero": {
+        "title": "Mastery in every touch",
+        "subtitleLine1": "A unique teaching method",
+        "subtitleLine2": "Not a \"from zero in 2 days\" course",
+        "badgeGraduates": "Only professionals graduate",
+        "badgeClients": "First clients during the course",
+        "touchTagline": "Be a pro",
+        "skillTagline": "Learn from a pro"
+    },
+    "about": {
+        "title": "About the course",
+        "text": "Touch&Skill courses stand for the most professional approach to training and for responsibility towards every patient who ends up in our graduates' hands. We don't just teach massage techniques - we train professionals who easily find their first clients and quickly reach a stable income",
+        "whyTitle": "Why choose Touch&Skill?",
+        "chooseProgram": "Choose a program",
+        "imageAlt": "Touch&Skill tutor explaining anatomy on a training poster"
+    },
+    "program": {
+        "title": "Course program"
+    },
+    "packages": {
+        "title": "Prices and packages",
+        "enroll": "enroll in the course",
+        "priceIncreaseIn": "price goes up in:",
+        "days": "days",
+        "hours": "hours",
+        "minutes": "minutes",
+        "seconds": "seconds",
+        "parentsCourse": "Course for parents"
+    },
+    "parents": {
+        "title": "Courses for parents",
+        "intro": "These are one-to-one sessions for parents of infants or of children with disabilities, where they learn specific exercise routines and other recommendations to follow at home",
+        "first": "First of all, these sessions help parents overcome the fear of touching their own child (which is quite common), as well as the stereotype that such exercises only happen in a clinic with specialists",
+        "second": "Second, fewer visits to specialists save both time and the family budget.",
+        "third": "Third, the knowledge and recommendations they gain stay with them for good.",
+        "duration": "The course lasts 2 days",
+        "imageAlt": "A mother massaging her baby"
+    },
+    "tutor": {
+        "title": "Your tutor",
+        "surname": "Shulezhko",
+        "givenNames": "Illia Oleksandrovych",
+        "role": "Practicing physical therapist",
+        "slogan": "Knowledge that\nmoves you forward",
+        "imageAlt": "Illia Shulezhko, Touch&Skill course tutor"
+    },
+    "guide": {
+        "title": "Manual",
+        "text": "The textbook \"Manual for Massage Therapists. A Practical Author's Guide\" is written for students, beginners and practicing massage therapists who want to deepen or refresh their knowledge and improve their practical skills. It sets out the core massage techniques, the anatomical and physiological basis of each procedure, indications and contraindications, and the specifics of working with different client groups - clearly and in a structured way. The material reflects current requirements for health and rehabilitation professionals. Special attention is paid to anatomy, with clear color illustrations for a thorough study of the theory. The textbook can be used as core reading for massage courses as well as for self-study",
+        "contactManager": "Contact a manager",
+        "contactManagerAria": "Contact a Touch&Skill manager on Telegram",
+        "promo": "Learn massage with the new textbook - “Manual for Massage Therapists”",
+        "promoAria": "Buy Manual for Massage Therapists on Etsy",
+        "sliderLabel": "Pages of the Manual for Massage Therapists",
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide",
+        "pageAlt": "Page of the Manual for Massage Therapists"
+    },
+    "reviews": {
+        "title": "Reviews",
+        "sliderLabel": "Student reviews"
+    },
+    "banner": {
+        "title": "Students who successfully complete a level can move on to the next one at a significant discount. Otherwise, the full course price applies",
+        "note": "If you decide not to continue the course, fees are non-refundable (except in confirmed cases of force majeure)",
+        "installments": "Installment payments available",
+        "imageAlt": "Discount on the next level of training"
+    },
+    "faq": {
+        "title": "Frequently asked questions"
+    },
+    "cta": {
+        "text": "Learn from a pro - become a {pro}! Enroll in the {course} today!",
+        "proWord": "pro",
+        "courseWord": "course"
+    },
+    "ad": {
+        "titleLine1": "Learn massage",
+        "titleLine2": "with the new textbook",
+        "bookAlt": "Manual for Massage Therapists",
+        "close": "Close the advertisement",
+        "buyAria": "Buy Manual for Massage Therapists on Etsy"
+    },
+    "footer": {
+        "hours": "Mon - Sat: 9:00 - 18:00"
+    },
+    "materials": {
+        "title": "Educational materials",
+        "close": "Back to the home page",
+        "breadcrumb": "Breadcrumb",
+        "buyAria": "Buy \"{name}\" on Etsy"
+    },
+    "seo": {
+        "home": {
+            "title": "Massage Courses in Warsaw {'|'} Touch&Skill - Professional Massage Therapist Training",
+            "description": "Professional massage courses in Warsaw by Touch&Skill. Classic, sports and lymphatic drainage massage training. Certificate, practice with real clients and help finding work. Early booking discounts!",
+            "shortDescription": "Professional massage courses in Warsaw. Basic and professional training programs. Experienced tutors, hands-on practice, certificate.",
+            "ogImageAlt": "Touch&Skill massage courses in Warsaw",
+            "courseName": "Professional massage courses",
+            "credential": "Certificate",
+            "bookName": "Manual for Massage Therapists. A Practical Guide",
+            "bookDescription": "A practical textbook for students, beginners and practicing massage therapists: techniques, anatomy, indications/contraindications and color illustrations."
+        },
+        "materials": {
+            "title": "Educational Materials for Massage Therapists {'|'} Touch&Skill",
+            "description": "Digital guides for massage therapists by Touch&Skill: a practical manual, a terminology quick-reference guide, a client intake guide and more. Available on Etsy."
+        },
+        "tutorName": "Illia Shulezhko"
+    }
+}

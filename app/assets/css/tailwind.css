@@ -7,6 +7,10 @@
 @theme {
     --color-purple: #5521f1;
     --color-purple-active: #4914e7;
+    --color-lavender: #7b83b3;
+
+    /* Handwritten accent (loaded from Google Fonts in nuxt.config.ts) */
+    --font-caveat: 'Caveat', cursive;
 
     /* брейкпоінти (screens) */
     --breakpoint-sm: 640px;

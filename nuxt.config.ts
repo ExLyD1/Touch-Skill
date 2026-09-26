@@ -9,7 +9,20 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         'shadcn-nuxt',
         'nuxt-aos',
+        '@nuxtjs/i18n',
     ],
+
+    i18n: {
+        baseUrl: 'https://touchskill.online',
+        defaultLocale: 'uk',
+        // Ukrainian keeps its existing unprefixed URLs, English lives under /en
+        strategy: 'prefix_except_default',
+        detectBrowserLanguage: false,
+        locales: [
+            { code: 'uk', language: 'uk-UA', name: 'UA', file: 'uk.json' },
+            { code: 'en', language: 'en-US', name: 'EN', file: 'en.json' },
+        ],
+    },
 
     shadcn: {
         prefix: '',
@@ -27,10 +40,6 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            htmlAttrs: {
-                lang: 'uk',
-            },
-
             link: [
                 { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
                 {
@@ -40,7 +49,7 @@ export default defineNuxtConfig({
                 },
                 {
                     rel: 'stylesheet',
-                    href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap',
+                    href: 'https://fonts.googleapis.com/css2?family=Caveat:wght@400&family=Montserrat:wght@300;400;500;600;700&display=swap',
                 },
             ],
 
