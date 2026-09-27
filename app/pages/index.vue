@@ -187,7 +187,7 @@
         <!-- Accordion FAQ Block -->
         <FAQ class="px-[15px] mt-[55px] sm:mt-[100px]" />
 
-        <!-- Advertisement: textbook on Etsy -->
+        <!-- Advertisement: textbook, bought through the manager on Telegram -->
         <div
             v-if="isAdvertismentVisible"
             data-aos="zoom-in"
@@ -222,7 +222,7 @@
 
                 <!-- Buy button -->
                 <a
-                    :href="ETSY_SHOP_URL"
+                    :href="TELEGRAM_URL"
                     target="_blank"
                     rel="noopener"
                     :aria-label="t('ad.buyAria')"
