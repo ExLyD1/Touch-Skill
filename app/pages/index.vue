@@ -363,7 +363,7 @@ useStructuredData(() => [
         bookFormat: 'https://schema.org/EBook',
         inLanguage: ['uk', 'en'],
         image: `${SITE_URL}/images/book/book1.webp`,
-        url: ETSY_SHOP_URL,
+        url: `${pageUrl.value}#book`,
     },
     {
         '@type': 'FAQPage',

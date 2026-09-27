@@ -53,10 +53,10 @@
                     </span>
                 </a>
 
-                <!-- Buy the textbook -->
+                <!-- Buy the textbook through the manager on Telegram -->
                 <a
                     data-aos="fade-left"
-                    :href="ETSY_SHOP_URL"
+                    :href="TELEGRAM_URL"
                     target="_blank"
                     rel="noopener"
                     :aria-label="t('guide.promoAria')"
