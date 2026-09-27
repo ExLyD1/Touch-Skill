@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-[318px] xl:w-[348px] h-[385px] xl:h-[395px] bg-white rounded-3xl p-6 shadow-lg shadow-[#00000040] drop-shadow-lg flex flex-col"
+        class="w-[318px] xl:w-[348px] h-[385px] xl:h-[395px] bg-white rounded-3xl p-6 shadow-[0_6px_18px_rgba(0,0,0,0.14)] flex flex-col"
     >
         <!-- Header -->
         <div class="flex items-start gap-4 mb-4">

@@ -73,7 +73,7 @@
                     <SplideSlide
                         v-for="(review, index) in reviewsList"
                         :key="index"
-                        class="!h-fit pb-5 px-5 pt-1"
+                        class="!h-fit pb-8 px-5 pt-3"
                     >
                         <ReviewCard :review="review" />
                     </SplideSlide>
@@ -133,7 +133,7 @@
             <SplideSlide
                 v-for="(review, index) in reviewsList"
                 :key="index"
-                class="pb-5 pt-1 splide-slide-item"
+                class="pb-8 pt-3 splide-slide-item"
             >
                 <ReviewCard :review="review" />
             </SplideSlide>

@@ -9,37 +9,8 @@ export interface IReview {
     text: Localized<string>;
 }
 
+// Oldest first: the newest reviews come last
 export const reviewsList: IReview[] = [
-    {
-        name: { uk: 'Анна Мельник', en: 'Anna Melnyk' },
-        image: '/images/reviews/person8.png',
-        date: '25.08.2026',
-        rating: 5,
-        text: {
-            uk: 'Дуже задоволена навчанням.\nВсе пояснюють буквально з нуля, тому навіть без попереднього досвіду було комфортно навчатися',
-            en: 'Very happy with the training.\nEverything is explained literally from scratch, so even without any prior experience it was comfortable to learn',
-        },
-    },
-    {
-        name: { uk: 'Дмитро Поліщук', en: 'Dmytro Polishchuk' },
-        image: '/images/reviews/person9.png',
-        date: '01.09.2026',
-        rating: 5,
-        text: {
-            uk: 'Сподобався формат навчання та подача матеріалу.\nВсе структуровано, зрозуміло і без перевантаження.\nПісля завершення курсу залишилося відчуття, що отримав не просто теорію, а навички, які можна використовувати на практиці',
-            en: 'I liked the training format and the way the material is presented.\nEverything is structured, clear and not overwhelming.\nAfter the course I felt I had gained not just theory, but skills I can use in practice',
-        },
-    },
-    {
-        name: { uk: 'Олена Савчук', en: 'Olena Savchuk' },
-        image: '/images/reviews/person10.png',
-        date: '24.09.2026',
-        rating: 5,
-        text: {
-            uk: 'Ілля, щиро дякую за курс!\nСпочатку переживала, що буде складно, але все виявилося дуже зрозуміло',
-            en: 'Illia, thank you so much for the course!\nAt first I was worried it would be difficult, but everything turned out to be very clear',
-        },
-    },
     {
         name: { uk: 'Марина Шевченко', en: 'Maryna Shevchenko' },
         image: '/images/reviews/person1.png',
@@ -108,6 +79,36 @@ export const reviewsList: IReview[] = [
         text: {
             uk: 'Дякую викладачу за професіоналізм. Спочатку прийшов просто заради цікавості, а зараз серйозно думаю відкрити свій кабінет. Дуже практичні знання, відчувається, що викладає людина з реальним досвідом роботи.',
             en: 'Thanks to the tutor for his professionalism. At first I came just out of curiosity, and now I’m seriously thinking about opening my own practice. Very practical knowledge - you can tell it’s taught by someone with real work experience.',
+        },
+    },
+    {
+        name: { uk: 'Анна Мельник', en: 'Anna Melnyk' },
+        image: '/images/reviews/person8.png',
+        date: '25.08.2026',
+        rating: 5,
+        text: {
+            uk: 'Дуже задоволена навчанням.\nВсе пояснюють буквально з нуля, тому навіть без попереднього досвіду було комфортно навчатися',
+            en: 'Very happy with the training.\nEverything is explained literally from scratch, so even without any prior experience it was comfortable to learn',
+        },
+    },
+    {
+        name: { uk: 'Дмитро Поліщук', en: 'Dmytro Polishchuk' },
+        image: '/images/reviews/person9.png',
+        date: '01.09.2026',
+        rating: 5,
+        text: {
+            uk: 'Сподобався формат навчання та подача матеріалу.\nВсе структуровано, зрозуміло і без перевантаження.\nПісля завершення курсу залишилося відчуття, що отримав не просто теорію, а навички, які можна використовувати на практиці',
+            en: 'I liked the training format and the way the material is presented.\nEverything is structured, clear and not overwhelming.\nAfter the course I felt I had gained not just theory, but skills I can use in practice',
+        },
+    },
+    {
+        name: { uk: 'Олена Савчук', en: 'Olena Savchuk' },
+        image: '/images/reviews/person10.png',
+        date: '24.09.2026',
+        rating: 5,
+        text: {
+            uk: 'Ілля, щиро дякую за курс!\nСпочатку переживала, що буде складно, але все виявилося дуже зрозуміло',
+            en: 'Illia, thank you so much for the course!\nAt first I was worried it would be difficult, but everything turned out to be very clear',
         },
     },
 ];
