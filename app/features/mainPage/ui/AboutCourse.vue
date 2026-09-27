@@ -19,12 +19,12 @@
         >
             <div
                 data-aos="fade-left"
-                class="about-photo relative w-full max-w-[448px] mx-auto lg:mx-0 lg:w-[388px] xl:w-[448px] flex-shrink-0 pt-1.5 pr-2"
+                class="about-photo relative w-full max-w-[448px] mx-auto lg:mx-0 lg:w-[388px] xl:w-[448px] flex-shrink-0 pt-3 pr-5 pb-3"
             >
-                <!-- Outline offset up and to the right of the photo -->
+                <!-- Outline offset up and to the right of the photo, slightly tilted -->
                 <div
                     aria-hidden="true"
-                    class="absolute top-0 right-0 bottom-1.5 left-2 rounded-[20px] border border-lavender/70"
+                    class="absolute top-1.5 right-3 bottom-4.5 left-2 rotate-[1.5deg] rounded-[20px] border border-lavender/70"
                 ></div>
                 <img
                     src="/images/general/about_new.webp"
